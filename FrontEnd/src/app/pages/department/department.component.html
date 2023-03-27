@@ -1,0 +1,72 @@
+<div class=" content">
+  <div class=" row">
+    <div class=" col-md-12">
+      <div class=" card card-plain">
+        <div class="row card-header">
+          <div class="col">
+            <h4 class=" card-title">Gestion des Départments</h4>
+            <p class=" category">Listes Des Départments</p>
+          </div>
+          <div class="col-5 text-center">
+            <h5>Rechercher :</h5>
+            <input class="form-control form-rounded" type="text">
+          </div>
+          <div class="col-2">
+            <button class="btn btn-grey m-3 mt-4 text-dark" (click)="ajouter()">Ajouter</button>
+          </div>
+        </div>
+        <div class=" card-body">
+          <div class=" table-responsive">
+            <table class=" table tablesorter" id="">
+              <thead class=" text-primary">
+              <tr>
+                <th class=" text-center">Numéro Départment</th>
+                <th class=" text-center">Intitulé Département</th>
+                <th class=" text-center">Budget Départment (DT)</th>
+                <th class=" text-center">Directeur Départment</th>
+                <th class=" text-center">Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td class=" text-center">1</td>
+                <td class=" text-center">Informatique</td>
+                <td class=" text-center">100 DT²</td>
+                <td class=" text-center">Molka Elloumi</td>
+                <td class=" text-center">
+                  <i class="tim-icons icon-alert-circle-exc m-2" (click)="consulter(1)"></i>
+                  <i class="tim-icons icon-pencil m-2" (click)="modifier(1)"></i>
+                  <i class="tim-icons icon-trash-simple m-2" (click)="deleteModal()"></i>
+                </td>
+              </tr>
+              <tr>
+                <td class=" text-center">2</td>
+                <td class=" text-center">Mecanique</td>
+                <td class=" text-center">200 DT</td>
+                <td class=" text-center">Ezzedine Hadj Sassi</td>
+                <td class=" text-center">
+                  <i class="tim-icons icon-alert-circle-exc m-2"></i>
+                  <i class="tim-icons icon-pencil m-2"></i>
+                  <i class="tim-icons icon-trash-simple m-2"></i>
+                </td>
+              </tr>
+              <tr>
+                <td class=" text-center">3</td>
+                <td class=" text-center">Physique</td>
+                <td class=" text-center">50 DT</td>
+                <td class=" text-center">Foulen Ben Foulen</td>
+                <td class=" text-center">
+                  <i class="tim-icons icon-alert-circle-exc m-2"></i>
+                  <i class="tim-icons icon-pencil m-2"></i>
+                  <i class="tim-icons icon-trash-simple m-2"></i>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
