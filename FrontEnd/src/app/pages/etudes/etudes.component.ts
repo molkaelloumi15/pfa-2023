@@ -4,46 +4,52 @@ import {MdbModalRef, MdbModalService} from 'mdb-angular-ui-kit/modal';
 import {DeleteModal} from '../../components/delete-modal/delete-modal.component';
 import {EtudeService} from '../../Services/etude.service';
 import {Etude} from '../../Model/Etude';
+import {HttpErrorResponse} from '@angular/common/http';
 
 @Component({
-  selector: 'app-etudes',
-  templateUrl: './etudes.component.html',
-  styleUrls: ['./etudes.component.scss']
+    selector: 'app-etudes',
+    templateUrl: './etudes.component.html',
+    styleUrls: ['./etudes.component.scss']
 })
-export class EtudesComponent implements OnInit{
+export class EtudesComponent implements OnInit {
 
-  modalRef: MdbModalRef<DeleteModal>;
-  public list : Etude[] = null ;
+    modalRef: MdbModalRef<DeleteModal>;
+    public list: Etude[] = [];
 
-  constructor(private router: Router,
-              private modalService: MdbModalService,
-              private etudeService: EtudeService) {
-  }
+    constructor(private router: Router,
+                private modalService: MdbModalService,
+                private etudeService: EtudeService) {
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+        this.getEtude();
+    }
 
-  getEtude():void{
-    this.etudeService.getEtudes().subscribe(
-      (response: Etude[]) => {
-      }
-    );
-  }
-  ajouter(): void {
-    this.router.navigate(['/etude/etudeAdd']);
-  }
+    getEtude(): void {
+        this.etudeService.getEtudes().subscribe(
+            (response: Etude[]) => {
+                this.list = response;
+            }, (error: HttpErrorResponse) => {
+                alert(error.message);
+            }
+        );
+    }
 
-  modifier(id: number): void {
-    this.router.navigate(['/etude/etudeMod']);
-  }
+    ajouter(): void {
+        this.router.navigate(['/etude/etudeAdd']);
+    }
 
-  deleteModal() {
-    this.modalRef = this.modalService.open(DeleteModal);
-    this.modalRef.onClose.subscribe((message: any) => {
-      // tslint:disable-next-line:triple-equals
-      if (message == true)
-        alert(message);
-    });
-  }
+    modifier(id: number): void {
+        this.router.navigate(['/etude/etudeMod']);
+    }
+
+    deleteModal() {
+        this.modalRef = this.modalService.open(DeleteModal);
+        this.modalRef.onClose.subscribe((message: any) => {
+            // tslint:disable-next-line:triple-equals
+            if (message == true)
+                alert(message);
+        });
+    }
 
 }
