@@ -1,7 +1,11 @@
 package ENSIT.GeniInfo1.PFA1.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class Employe implements Serializable {
@@ -13,19 +17,24 @@ public class Employe implements Serializable {
 
     private String nomEmp;
 
-    @ManyToOne(targetEntity = Departement.class)
-    @JoinColumn(nullable = false, name = "numDep")
-    private Departement departement ;
+    private String fonctionEmp;
 
     @ManyToOne(targetEntity = PosteTelephonique.class)
-    @JoinColumn(nullable = false, name = "numeroAppel")
+    @JoinColumn(nullable = true, name = "numeroAppel")
     private PosteTelephonique posteTelephonique ;
 
-    @ManyToOne(targetEntity = ProjetRecherche.class)
-    @JoinColumn(nullable = false, name = "numProjetRecherche")
-    private ProjetRecherche projetRecherche;
 
-    public Employe() {}
+    @ManyToMany
+    @JoinTable(
+            name = "emp_pro",
+            joinColumns = @JoinColumn(name = "numEmp"),
+            inverseJoinColumns = @JoinColumn(name = "numProjetRecherche")
+    )
+    private Set<ProjetRecherche> projetRecherche;
+
+    public Employe() {
+        this.projetRecherche = new HashSet<>();
+    }
 
     public int getNumEmp() {
         return numEmp;
@@ -43,12 +52,12 @@ public class Employe implements Serializable {
         this.nomEmp = nomEmp;
     }
 
-    public Departement getDepartement() {
-        return departement;
+    public String getFonctionEmp() {
+        return fonctionEmp;
     }
 
-    public void setDepartement(Departement departement) {
-        this.departement = departement;
+    public void setFonctionEmp(String fonctionEmp) {
+        this.fonctionEmp = fonctionEmp;
     }
 
     public PosteTelephonique getPosteTelephonique() {
@@ -59,13 +68,22 @@ public class Employe implements Serializable {
         this.posteTelephonique = posteTelephonique;
     }
 
-    public ProjetRecherche getProjetRecherche() {
+    public Set<ProjetRecherche> getProjetRecherche() {
         return projetRecherche;
     }
 
-    public void setProjetRecherche(ProjetRecherche projetRecherche) {
+    public void setProjetRecherche(Set<ProjetRecherche> projetRecherche) {
         this.projetRecherche = projetRecherche;
     }
 
-
+    @Override
+    public String toString() {
+        return "Employe{" +
+                "numEmp=" + numEmp +
+                ", nomEmp='" + nomEmp + '\'' +
+                ", fonctionEmp='" + fonctionEmp + '\'' +
+                ", posteTelephonique=" + posteTelephonique +
+                ", projetRecherche= [" + projetRecherche.size() +
+                "]}";
+    }
 }

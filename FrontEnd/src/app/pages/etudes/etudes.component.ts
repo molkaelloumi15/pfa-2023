@@ -40,10 +40,10 @@ export class EtudesComponent implements OnInit {
     }
 
     modifier(id: number): void {
-        this.router.navigate(['/etude/etudeMod']);
+        this.router.navigate(['/etude/etudeMod',id]);
     }
 
-    deleteModal() {
+    deleteModal(id : number) {
         this.modalRef = this.modalService.open(DeleteModal);
         this.modalRef.onClose.subscribe((message: any) => {
             // tslint:disable-next-line:triple-equals

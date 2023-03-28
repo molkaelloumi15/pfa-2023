@@ -7,11 +7,10 @@ import java.io.Serializable;
 public class PosteTelephonique implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, updatable = false)
-    private int numeroAppel;
+        private int numeroAppel;
     @ManyToOne(targetEntity = Bureau.class)
-    @JoinColumn(nullable = false, name = "numBureau")
+    @JoinColumn(nullable = true, name = "numBureau")
     private Bureau bureau;
 
     public PosteTelephonique() {}
@@ -40,4 +39,3 @@ public class PosteTelephonique implements Serializable {
                 '}';
     }
 }
-

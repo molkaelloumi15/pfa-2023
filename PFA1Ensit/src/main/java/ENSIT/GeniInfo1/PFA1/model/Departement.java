@@ -15,6 +15,8 @@ public class Departement implements Serializable {
 
     private float budgetDep;
 
+    private int directeur ;
+
 
     public Departement() {}
 
@@ -42,12 +44,21 @@ public class Departement implements Serializable {
         this.budgetDep = budgetDep;
     }
 
+    public int getDirecteur() {
+        return directeur;
+    }
+
+    public void setDirecteur(int directeur) {
+        this.directeur = directeur;
+    }
+
     @Override
     public String toString() {
         return "Departement{" +
                 "numDep=" + numDep +
                 ", intituleDep='" + intituleDep + '\'' +
                 ", budgetDep=" + budgetDep +
+                ", id_directeur=" + directeur +
                 '}';
     }
 }

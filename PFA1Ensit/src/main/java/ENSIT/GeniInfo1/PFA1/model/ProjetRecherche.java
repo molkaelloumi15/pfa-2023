@@ -3,6 +3,8 @@ package ENSIT.GeniInfo1.PFA1.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 public class ProjetRecherche implements Serializable {
@@ -13,16 +15,22 @@ public class ProjetRecherche implements Serializable {
     @Column(nullable = false, updatable = false)
     private int numProjetRecherche;
 
-    private String intituleProjetRecherche ;
+    private String intituleProjetRecherche;
 
-    private float budgetProjetRecherche ;
+    private float budgetProjetRecherche;
 
     @ManyToOne(targetEntity = Departement.class)
-    @JoinColumn(nullable = false, name = "numDep")
-    private Departement departement ;
+    @JoinColumn(nullable = true, name = "numDep")
+    private Departement departement;
 
+    @ManyToMany(mappedBy = "projetRecherche")
+    private Set<Employe> employes;
 
-    public ProjetRecherche() {}
+//    @ManyToMany(mappedBy = "projetRecherche")
+//    private List<Employe> employe;
+
+    public ProjetRecherche() {
+    }
 
     public int getNumProjetRecherche() {
         return numProjetRecherche;
@@ -55,6 +63,14 @@ public class ProjetRecherche implements Serializable {
     public void setDepartement(Departement departement) {
         this.departement = departement;
     }
+
+//    public Set<Employe> getEmployes() {
+//        return employes;
+//    }
+//
+//    public void setEmployes(Set<Employe> employes) {
+//        this.employes = employes;
+//    }
 
     @Override
     public String toString() {

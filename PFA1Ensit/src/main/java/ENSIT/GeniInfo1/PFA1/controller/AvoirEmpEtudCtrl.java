@@ -20,10 +20,16 @@ public class AvoirEmpEtudCtrl {
         return new ResponseEntity<>(AvoirEmpEtuds, HttpStatus.OK);
     }
 
-    @GetMapping("/find/{id}")
-    public ResponseEntity<AvoirEmpEtud> getAvoirEmpEtudsById (@PathVariable("id") Integer id){
-        AvoirEmpEtud AvoirEmpEtuds = this.AvoirEmpEtudService.findAvoirEmpEtudById(id);
-        return new ResponseEntity<>(AvoirEmpEtuds,HttpStatus.OK);
+//    @GetMapping("/find/{id}")
+//    public ResponseEntity<AvoirEmpEtud> getAvoirEmpEtudsById (@PathVariable("id") Integer id){
+//        AvoirEmpEtud AvoirEmpEtuds = this.AvoirEmpEtudService.findAvoirEmpEtudById(id);
+//        return new ResponseEntity<>(AvoirEmpEtuds,HttpStatus.OK);
+//    }
+
+    @GetMapping("/find/{numEmp}/{idEtude}")
+    public ResponseEntity<AvoirEmpEtud> getAvoirEmpEtudsById(@PathVariable("numEmp") Integer numEmp, @PathVariable("idEtude") Integer idEtude) {
+        AvoirEmpEtud AvoirEmpEtuds = this.AvoirEmpEtudService.findAvoirEmpEtudById(numEmp, idEtude);
+        return ResponseEntity.ok(AvoirEmpEtuds);
     }
 
     @PostMapping("/add")
@@ -38,9 +44,15 @@ public class AvoirEmpEtudCtrl {
         return new ResponseEntity<>(updateAvoirEmpEtuds,HttpStatus.OK);
     }
 
-    @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?> deleteAvoirEmpEtudsById (@PathVariable("id") Integer id){
-        this.AvoirEmpEtudService.deleteAvoirEmpEtud(id);
+//    @DeleteMapping("/delete/{id}")
+//    public ResponseEntity<?> deleteAvoirEmpEtudsById (@PathVariable("id") Integer id){
+//        this.AvoirEmpEtudService.deleteAvoirEmpEtud(id);
+//        return new ResponseEntity<>(HttpStatus.OK);
+//    }
+
+    @DeleteMapping("/delete/{numEmp}/{idEtude}")
+    public ResponseEntity<?> deleteAvoirEmpEtudsById(@PathVariable("numEmp") Integer numEmp, @PathVariable("idEtude") Integer idEtude) {
+        this.AvoirEmpEtudService.deleteAvoirEmpEtud(numEmp, idEtude);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 

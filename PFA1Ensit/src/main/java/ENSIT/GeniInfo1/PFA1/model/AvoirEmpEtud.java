@@ -5,18 +5,15 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
+@IdClass(AvoirEmpEtudPk .class)
 public class AvoirEmpEtud implements Serializable {
 
-
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false, updatable = false)
-    private int IdAvoirEmpEtud;
-
     @ManyToOne(targetEntity = Employe.class)
     @JoinColumn(nullable = false, name = "numEmp")
     private Employe employe;
 
+    @Id
     @ManyToOne(targetEntity = Etude.class)
     @JoinColumn(nullable = false, name = "idEtude")
     private Etude etude;
@@ -26,14 +23,6 @@ public class AvoirEmpEtud implements Serializable {
     private float salaire ;
 
     public AvoirEmpEtud() {}
-
-    public int getIdAvoirEmpEtud() {
-        return IdAvoirEmpEtud;
-    }
-
-    public void setIdAvoirEmpEtud(int idAvoirEmpEtud) {
-        IdAvoirEmpEtud = idAvoirEmpEtud;
-    }
 
     public Employe getEmploye() {
         return employe;
@@ -70,8 +59,7 @@ public class AvoirEmpEtud implements Serializable {
     @Override
     public String toString() {
         return "AvoirEmpEtud{" +
-                "IdAvoirEmpEtud=" + IdAvoirEmpEtud +
-                ", employe=" + employe +
+                "employe=" + employe +
                 ", etude=" + etude +
                 ", date=" + date +
                 ", salaire=" + salaire +

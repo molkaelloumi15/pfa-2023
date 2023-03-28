@@ -14,7 +14,7 @@ public class Bureau implements Serializable {
     private double surface;
 
     @ManyToOne(targetEntity = Departement.class)
-    @JoinColumn(nullable = false, name = "numDep")
+    @JoinColumn(nullable = true, name = "numDep")
     private Departement departement;
 
     public Bureau() {}
