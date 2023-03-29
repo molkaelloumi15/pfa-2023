@@ -9,12 +9,12 @@ import java.util.Date;
 public class AvoirEmpEtud implements Serializable {
 
     @Id
-    @ManyToOne(targetEntity = Employe.class)
+    @ManyToOne(targetEntity = Employe.class, cascade = CascadeType.REMOVE)
     @JoinColumn(nullable = false, name = "numEmp")
     private Employe employe;
 
     @Id
-    @ManyToOne(targetEntity = Etude.class)
+    @ManyToOne(targetEntity = Etude.class, cascade = CascadeType.REMOVE)
     @JoinColumn(nullable = false, name = "idEtude")
     private Etude etude;
 

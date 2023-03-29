@@ -23,42 +23,18 @@
                 <th class=" text-center">Numéro Départment</th>
                 <th class=" text-center">Intitulé Département</th>
                 <th class=" text-center">Budget Départment (DT)</th>
-                <th class=" text-center">Directeur Départment</th>
                 <th class=" text-center">Action</th>
               </tr>
               </thead>
               <tbody>
-              <tr>
-                <td class=" text-center">1</td>
-                <td class=" text-center">Informatique</td>
-                <td class=" text-center">100 DT²</td>
-                <td class=" text-center">Molka Elloumi</td>
+              <tr *ngFor = "let i of list">
+                <td class=" text-center">{{i.numDep}}</td>
+                <td class=" text-center">{{i.intituleDep}}</td>
+                <td class=" text-center">{{i.budgetDep}} DT²</td>
                 <td class=" text-center">
-                  <i class="tim-icons icon-alert-circle-exc m-2" (click)="consulter(1)"></i>
-                  <i class="tim-icons icon-pencil m-2" (click)="modifier(1)"></i>
-                  <i class="tim-icons icon-trash-simple m-2" (click)="deleteModal()"></i>
-                </td>
-              </tr>
-              <tr>
-                <td class=" text-center">2</td>
-                <td class=" text-center">Mecanique</td>
-                <td class=" text-center">200 DT</td>
-                <td class=" text-center">Ezzedine Hadj Sassi</td>
-                <td class=" text-center">
-                  <i class="tim-icons icon-alert-circle-exc m-2"></i>
-                  <i class="tim-icons icon-pencil m-2"></i>
-                  <i class="tim-icons icon-trash-simple m-2"></i>
-                </td>
-              </tr>
-              <tr>
-                <td class=" text-center">3</td>
-                <td class=" text-center">Physique</td>
-                <td class=" text-center">50 DT</td>
-                <td class=" text-center">Foulen Ben Foulen</td>
-                <td class=" text-center">
-                  <i class="tim-icons icon-alert-circle-exc m-2"></i>
-                  <i class="tim-icons icon-pencil m-2"></i>
-                  <i class="tim-icons icon-trash-simple m-2"></i>
+                  <i class="tim-icons icon-alert-circle-exc m-2" (click)="consulter(i.numDep)"></i>
+                  <i class="tim-icons icon-pencil m-2" (click)="modifier(i.numDep)"></i>
+                  <i class="tim-icons icon-trash-simple m-2" (click)="deleteModal(i.numDep)"></i>
                 </td>
               </tr>
               </tbody>

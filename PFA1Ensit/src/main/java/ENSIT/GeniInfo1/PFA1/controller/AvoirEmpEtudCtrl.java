@@ -1,6 +1,8 @@
 package ENSIT.GeniInfo1.PFA1.controller;
 
 import ENSIT.GeniInfo1.PFA1.model.AvoirEmpEtud;
+import ENSIT.GeniInfo1.PFA1.model.Employe;
+import ENSIT.GeniInfo1.PFA1.model.Etude;
 import ENSIT.GeniInfo1.PFA1.service.AvoirEmpEtudService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +19,18 @@ public class AvoirEmpEtudCtrl {
     @GetMapping("/all")
     public ResponseEntity<List<AvoirEmpEtud>> getAllAvoirEmpEtuds (){
         List<AvoirEmpEtud> AvoirEmpEtuds= this.AvoirEmpEtudService.findAllAvoirEmpEtud();
+        return new ResponseEntity<>(AvoirEmpEtuds, HttpStatus.OK);
+    }
+
+    @GetMapping("/emp/{emp}")
+    public ResponseEntity<List<AvoirEmpEtud>> getAllAvoirEmpEtudsByEmp (@PathVariable("emp") Integer emp){
+        List<AvoirEmpEtud> AvoirEmpEtuds= this.AvoirEmpEtudService.findAllByEmp(emp);
+        return new ResponseEntity<>(AvoirEmpEtuds, HttpStatus.OK);
+    }
+
+    @GetMapping("/etu/{etu}")
+    public ResponseEntity<List<AvoirEmpEtud>> getAllAvoirEmpEtudsByEtud (@PathVariable("etu") Integer etu){
+        List<AvoirEmpEtud> AvoirEmpEtuds= this.AvoirEmpEtudService.findAllByEtud(etu);
         return new ResponseEntity<>(AvoirEmpEtuds, HttpStatus.OK);
     }
 

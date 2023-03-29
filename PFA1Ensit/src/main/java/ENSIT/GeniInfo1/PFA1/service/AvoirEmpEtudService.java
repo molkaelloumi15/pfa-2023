@@ -18,17 +18,26 @@ public class AvoirEmpEtudService {
 
     @Autowired
 
-    public AvoirEmpEtudService(AvoirEmpEtudRepo AvoirEmpEtudRepo) {this.AvoirEmpEtudRepo = AvoirEmpEtudRepo;}
+    public AvoirEmpEtudService(AvoirEmpEtudRepo AvoirEmpEtudRepo) {
+        this.AvoirEmpEtudRepo = AvoirEmpEtudRepo;
+    }
 
-    public AvoirEmpEtud addAvoirEmpEtud(AvoirEmpEtud AvoirEmpEtud) {return this.AvoirEmpEtudRepo.save(AvoirEmpEtud);}
+    public AvoirEmpEtud addAvoirEmpEtud(AvoirEmpEtud AvoirEmpEtud) {
+        return this.AvoirEmpEtudRepo.save(AvoirEmpEtud);
+    }
 
     public AvoirEmpEtud findAvoirEmpEtudById(Integer employe, Integer etude) {
         AvoirEmpEtudPk avoirEmpEtudPk = new AvoirEmpEtudPk(employe, etude);
         return this.AvoirEmpEtudRepo.findById(avoirEmpEtudPk).orElseThrow(() -> new UserNotFoundException("AvoirEmpEtud with employe = " + employe + " and etude = " + etude + " was not found"));
     }
-    public List<AvoirEmpEtud> findAllAvoirEmpEtud() {return this.AvoirEmpEtudRepo.findAll();}
 
-    public AvoirEmpEtud updateAvoirEmpEtud(AvoirEmpEtud AvoirEmpEtud) {return AvoirEmpEtudRepo.save(AvoirEmpEtud);}
+    public List<AvoirEmpEtud> findAllAvoirEmpEtud() {
+        return this.AvoirEmpEtudRepo.findAll();
+    }
+
+    public AvoirEmpEtud updateAvoirEmpEtud(AvoirEmpEtud AvoirEmpEtud) {
+        return AvoirEmpEtudRepo.save(AvoirEmpEtud);
+    }
 
     public void deleteAvoirEmpEtud(AvoirEmpEtud AvoirEmpEtud) {
         this.AvoirEmpEtudRepo.delete(AvoirEmpEtud);
@@ -37,6 +46,14 @@ public class AvoirEmpEtudService {
     public void deleteAvoirEmpEtud(Integer numEmp, Integer idEtude) {
         AvoirEmpEtudPk pk = new AvoirEmpEtudPk(numEmp, idEtude);
         this.AvoirEmpEtudRepo.deleteById(pk);
+    }
+
+    public List<AvoirEmpEtud> findAllByEmp(int employe) {
+        return this.AvoirEmpEtudRepo.findAllByEmploye_NumEmp(employe);
+    }
+
+    public List<AvoirEmpEtud> findAllByEtud(int etude) {
+        return this.AvoirEmpEtudRepo.findAllByEtude_IdEtude(etude);
     }
 
 }

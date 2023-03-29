@@ -1,3 +1,5 @@
+<!--suppress ALL -->
+
 <div class=" content">
   <div class=" row">
     <div class=" col-md-12">
@@ -5,13 +7,14 @@
         <h2>Mise à jour D'une éutde</h2>
       </div>
       <div class="w-50 mx-auto">
-        <form class="mt-5">
+        <form class="mt-5" (submit)="onSubmit(form)" #form="ngForm">
           <div class="form-group row">
             <label class="form-label col">Intitulé de la nouvelle étude</label>
-            <input class="input-group-text mx-auto col" value="Génie Logiciel" type="text">
+            <input class="input-group-text mx-auto col" [(ngModel)]="etude.titreEtude" type="text"
+                   name="titre" #titre="ngModel" required ngModel >
           </div>
           <div class="">
-            <input type="submit" class="btn btn-danger float-lg-end" value="Mise à jour">
+            <input type="submit" [disabled]="etude.titreEtude === ''" class="btn btn-danger float-lg-end" value="Mise à jour">
             <!--            <h5 class="text-success col h4">Nouveau Projet De Recherche Ajouté Avec Succée</h5>-->
           </div>
         </form>

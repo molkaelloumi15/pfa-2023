@@ -1,0 +1,37 @@
+<div class="" style="margin-top: -1%">
+
+
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Recherche D'un Directeur</h5>
+    </div>
+    <div class="modal-body">
+        <div class="">
+            <table class=" table tablesorter" id="">
+                <thead class=" text-primary">
+                <tr>
+                    <th class=" text-center">Numéro Employer</th>
+                    <th class=" text-center">Nom Employer </th>
+                    <th class=" text-center">Fonction Employer </th>
+                    <th class=" text-center">Poste Telephonique</th>
+                    <th class=" text-center">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor = "let i of list">
+                    <td class=" text-center">{{i.numEmp}}</td>
+                    <td class=" text-center">{{i.nomEmp}}</td>
+                    <td class=" text-center">{{i.fonctionEmp}}</td>
+                    <td class=" text-center">{{i.posteTelephonique.numeroAppel}}</td>
+                    <td class=" text-center">
+                        <i class="tim-icons icon-tap-02 m-2" (click)="select(i.numEmp)"></i>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="accept()">Ajouter Un Directeur</button>
+        <button type="button" class="btn btn-danger" (click)="close()">Annuler</button>
+    </div>
+</div>

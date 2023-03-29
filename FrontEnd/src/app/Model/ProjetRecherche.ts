@@ -2,7 +2,7 @@ import {Departement} from './Departement';
 
 export interface ProjetRecherche {
   numProjetRecherche: number;
-  intituleProjetRecherche: number;
+  intituleProjetRecherche: string;
   budgetProjetRecherche: number ;
   departement: Departement;
 

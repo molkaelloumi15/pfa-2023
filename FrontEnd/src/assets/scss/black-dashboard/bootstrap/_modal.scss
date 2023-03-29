@@ -91,7 +91,7 @@
   background-color: $modal-backdrop-bg;
 
   // Fade for backdrop
-  &.fade { opacity: 0; }
+  &.fade { opacity: 10; }
   &.show { opacity: $modal-backdrop-opacity; }
 }
 

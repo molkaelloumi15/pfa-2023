@@ -29,48 +29,15 @@
               </tr>
               </thead>
               <tbody>
-              <tr>
-                <td class=" text-center">1</td>
-                <td class=" text-center">Projet Fin D'année</td>
-                <td class=" text-center">100 DT</td>
-                <td class=" text-center">Informatique</td>
+              <tr  *ngFor = "let i of list">
+                <td class=" text-center">{{i.numProjetRecherche}}</td>
+                <td class=" text-center">{{i.intituleProjetRecherche}}</td>
+                <td class=" text-center">{{i.budgetProjetRecherche}} DT</td>
+                <td class=" text-center">{{i.departement.intituleDep}}</td>
                 <td class=" text-center">
-                  <i class="tim-icons icon-alert-circle-exc m-2"  (click)="consulter(1)"></i>
-                  <i class="tim-icons icon-pencil m-2"  (click)="modifier(1)"></i>
-                  <i class="tim-icons icon-trash-simple m-2" (click)="deleteModal()"></i>
-                </td>
-              </tr>
-              <tr>
-                <td class=" text-center">2</td>
-                <td class=" text-center">Projet Wallys Car</td>
-                <td class=" text-center">200 DT</td>
-                <td class=" text-center">Mecanique</td>
-                <td class=" text-center">
-                  <i class="tim-icons icon-alert-circle-exc m-2"></i>
-                  <i class="tim-icons icon-pencil m-2"></i>
-                  <i class="tim-icons icon-trash-simple m-2"></i>
-                </td>
-              </tr>
-              <tr>
-                <td class=" text-center">3</td>
-                <td class=" text-center">Projet pysique quantique</td>
-                <td class=" text-center">50 DT</td>
-                <td class=" text-center">Physique</td>
-                <td class=" text-center">
-                  <i class="tim-icons icon-alert-circle-exc m-2"></i>
-                  <i class="tim-icons icon-pencil m-2"></i>
-                  <i class="tim-icons icon-trash-simple m-2"></i>
-                </td>
-              </tr>
-              <tr>
-                <td class=" text-center">4</td>
-                <td class=" text-center">Projet Machine Learning</td>
-                <td class=" text-center">500 DT</td>
-                <td class=" text-center">Informatique</td>
-                <td class=" text-center">
-                  <i class="tim-icons icon-alert-circle-exc m-2"></i>
-                  <i class="tim-icons icon-pencil m-2"></i>
-                  <i class="tim-icons icon-trash-simple m-2"></i>
+                  <i class="tim-icons icon-alert-circle-exc m-2"  (click)="consulter(i.numProjetRecherche)"></i>
+                  <i class="tim-icons icon-pencil m-2"  (click)="modifier(i.numProjetRecherche)"></i>
+                  <i class="tim-icons icon-trash-simple m-2" (click)="deleteModal(i.numProjetRecherche)"></i>
                 </td>
               </tr>
               </tbody>

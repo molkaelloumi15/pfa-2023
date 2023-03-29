@@ -1,0 +1,37 @@
+<div class="" style="margin-top: -1%">
+
+
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Recherche D'un Projet De Recherche</h5>
+    </div>
+    <div class="modal-body">
+        <div class="">
+            <table class=" table tablesorter" id="">
+                <thead class=" text-primary">
+                <tr>
+                    <th class=" text-center">Numéro Projet</th>
+                    <th class=" text-center">Intitulé Projet</th>
+                    <th class=" text-center">Budget Projet (DT)</th>
+                    <th class=" text-center">Departement</th>
+                    <th class=" text-center">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr  *ngFor = "let i of list">
+                    <td class=" text-center">{{i.numProjetRecherche}}</td>
+                    <td class=" text-center">{{i.intituleProjetRecherche}}</td>
+                    <td class=" text-center">{{i.budgetProjetRecherche}} DT</td>
+                    <td class=" text-center">{{i.departement.intituleDep}}</td>
+                    <td class=" text-center">
+                        <i class="tim-icons icon-tap-02 m-2" (click)="select(i.numProjetRecherche)"></i>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="accept()">Ajouter Un Projet de Recherche</button>
+        <button type="button" class="btn btn-danger" (click)="close()">Annuler</button>
+    </div>
+</div>

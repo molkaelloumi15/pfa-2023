@@ -15,6 +15,7 @@ public class Departement implements Serializable {
 
     private float budgetDep;
 
+    @Column(columnDefinition = "integer default 1")
     private int directeur ;
 
 

@@ -19,11 +19,11 @@ public class ProjetRecherche implements Serializable {
 
     private float budgetProjetRecherche;
 
-    @ManyToOne(targetEntity = Departement.class)
+    @ManyToOne(targetEntity = Departement.class, cascade = CascadeType.DETACH)
     @JoinColumn(nullable = true, name = "numDep")
     private Departement departement;
 
-    @ManyToMany(mappedBy = "projetRecherche")
+    @ManyToMany(mappedBy = "projetRecherche", cascade = CascadeType.REMOVE)
     private Set<Employe> employes;
 
 //    @ManyToMany(mappedBy = "projetRecherche")

@@ -48,7 +48,11 @@ export class EtudesComponent implements OnInit {
         this.modalRef.onClose.subscribe((message: any) => {
             // tslint:disable-next-line:triple-equals
             if (message == true)
-                alert(message);
+                this.etudeService.deleteEtude(id).subscribe(
+                    (resolve: void) => {
+                        this.getEtude();
+                    }
+                );
         });
     }
 

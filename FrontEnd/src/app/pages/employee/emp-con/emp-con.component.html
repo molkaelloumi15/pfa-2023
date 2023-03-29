@@ -1,38 +1,59 @@
 <div class=" content">
-  <div class=" row">
-    <div class="col-md-12">
-      <div class=" card card-user">
-        <div class=" card-body">
-          <p class=" card-text"></p>
-          <div class=" author">
-            <div class=" block block-one"></div>
-            <div class=" block block-two"></div>
-            <div class=" block block-three"></div>
-            <div class=" block block-four"></div>
-            <div href="javascript:void(0)">
-              <img alt="..." class=" avatar" src="assets/img/default-avatar.png"/>
+    <div class=" row">
+        <div class="col-md-12">
+            <div class=" card card-user">
+                <div class=" card-body">
+                    <p class=" card-text"></p>
+                    <div class=" author">
+                        <div class=" block block-one"></div>
+                        <div class=" block block-two"></div>
+                        <div class=" block block-three"></div>
+                        <div class=" block block-four"></div>
+                        <div href="javascript:void(0)">
+                            <img alt="..." class=" avatar" src="assets/img/default-avatar.png"/>
 
-              <h5 class=" title">Molka Elloumi</h5>
-            </div>
-            <p class="description">Directeur du département <b>Informatique</b></p>
-            <p class="card-title">Poste Telephonique <b><em>+216 12 345 789</em></b></p>
-          </div>
+                            <h5 class=" title">{{employer.nomEmp}}</h5>
+                        </div>
+                        <p class="description">Fonction <b>{{employer.fonctionEmp}}</b></p>
+                        <p class="card-title">Poste Telephonique
+                            <b><em>+216 {{employer.posteTelephonique.numeroAppel}}</em></b></p>
+                    </div>
 
-          <div class="row text-center">
-            <div class="col">
-              <div class="row"><div class="card-title">Projets De Recherches</div></div>
-              <div class="row"><div class="card-description">Projet Fin D'année<br>Projet Wallys Car<br>Projet Mecanique</div></div>
-            </div>
-            <div class="col">
-              <div class="row"><div class="card-title">Etudes</div></div>
-              <div class="row"><div class="card-description">Préparatoire<br>Physique<br>Mathématique</div></div>
-            </div>
-          </div>
+                    <div class="row text-center">
+                        <div class="col">
+                            <div class="row">
+                                <div class="card-title">Projets De Recherches</div>
+                            </div>
+                            <div class="row">
+                                <div class="card-description">
+                                    <div>
+                                        <span *ngFor="let p of employer.projetRecherche">{{p.intituleProjetRecherche}}
+                                            <br></span>
+                                    </div>
+                                    <!--                Projet Fin D'année<br>Projet Wallys Car<br>Projet Mecanique-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="card-title">Etudes</div>
+                            </div>
+                            <div class="row">
+                                <div class="card-description">
+                                    <div>
+                                        <span *ngFor="let p of etudes">{{p.titreEtude}}
+                                            <br></span>
+                                    </div>
+                                    <!--                Préparatoire<br>Physique<br>Mathématique-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 
 

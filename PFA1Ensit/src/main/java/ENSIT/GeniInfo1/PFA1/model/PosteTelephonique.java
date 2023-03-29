@@ -9,7 +9,7 @@ public class PosteTelephonique implements Serializable {
     @Id
     @Column(nullable = false, updatable = false)
         private int numeroAppel;
-    @ManyToOne(targetEntity = Bureau.class)
+    @ManyToOne(targetEntity = Bureau.class, cascade = CascadeType.DETACH)
     @JoinColumn(nullable = true, name = "numBureau")
     private Bureau bureau;
 

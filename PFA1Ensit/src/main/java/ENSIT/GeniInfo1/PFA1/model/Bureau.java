@@ -13,7 +13,7 @@ public class Bureau implements Serializable {
 
     private double surface;
 
-    @ManyToOne(targetEntity = Departement.class)
+    @ManyToOne(targetEntity = Departement.class, cascade = CascadeType.DETACH)
     @JoinColumn(nullable = true, name = "numDep")
     private Departement departement;
 

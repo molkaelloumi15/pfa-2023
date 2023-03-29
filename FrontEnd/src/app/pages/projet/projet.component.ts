@@ -2,6 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {DeleteModal} from '../../components/delete-modal/delete-modal.component';
 import {MdbModalRef, MdbModalService} from 'mdb-angular-ui-kit/modal';
+import {ProjetRecherche} from '../../Model/ProjetRecherche';
+import {ProjetRechercheService} from '../../Services/projet-recherche.service';
+import {HttpErrorResponse} from '@angular/common/http';
 
 @Component({
   selector: 'app-projet',
@@ -11,8 +14,25 @@ import {MdbModalRef, MdbModalService} from 'mdb-angular-ui-kit/modal';
 export class ProjetComponent implements OnInit {
 
   modalRef: MdbModalRef<DeleteModal>;
+  public list: ProjetRecherche[] = [];
 
-  constructor(private router: Router, private modalService: MdbModalService) {
+  constructor(private router: Router,
+              private modalService: MdbModalService,
+              private projetService: ProjetRechercheService) {
+  }
+
+  ngOnInit(): void {
+    this.getProjet();
+  }
+
+  getProjet(): void {
+    this.projetService.getProjetRecherches().subscribe(
+        (response: ProjetRecherche[]) => {
+          this.list = response;
+        }, (error: HttpErrorResponse) => {
+          alert(error.message);
+        }
+    );
   }
 
   ajouter(): void {
@@ -20,23 +40,24 @@ export class ProjetComponent implements OnInit {
   }
 
   consulter(id: number): void {
-    this.router.navigate(['/projet_recherche/proCon']);
+    this.router.navigate(['/projet_recherche/proCon',id]);
   }
 
   modifier(id: number): void {
-    this.router.navigate(['/projet_recherche/proMod']);
+    this.router.navigate(['/projet_recherche/proMod',id]);
   }
 
 
-  ngOnInit(): void {
-  }
-
-  deleteModal() {
+  deleteModal(id: number) {
     this.modalRef = this.modalService.open(DeleteModal);
     this.modalRef.onClose.subscribe((message: any) => {
       // tslint:disable-next-line:triple-equals
       if (message == true)
-        alert(message);
+        this.projetService.deleteProjetRecherche(id).subscribe(
+            (resolve: void) => {
+              this.getProjet();
+            }
+        );
     });
   }
 }

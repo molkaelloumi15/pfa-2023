@@ -19,12 +19,12 @@ public class Employe implements Serializable {
 
     private String fonctionEmp;
 
-    @ManyToOne(targetEntity = PosteTelephonique.class)
+    @ManyToOne(targetEntity = PosteTelephonique.class, cascade = CascadeType.DETACH)
     @JoinColumn(nullable = true, name = "numeroAppel")
     private PosteTelephonique posteTelephonique ;
 
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.REMOVE)
     @JoinTable(
             name = "emp_pro",
             joinColumns = @JoinColumn(name = "numEmp"),

@@ -18,6 +18,14 @@ export class AvoirEmpService {
     return this.http.get<AvoirEmpEtud[]>(`${this.apiServeurUrl}/AvoirEmpEtud/all`);
   }
 
+  public getAllAvoirEmpEtudsByEmp(id: number): Observable<AvoirEmpEtud[]> {
+    return this.http.get<AvoirEmpEtud[]>(`${this.apiServeurUrl}/AvoirEmpEtud/emp/${id}`);
+  }
+
+  public getAllAvoirEmpEtudsByEtud(id:number): Observable<AvoirEmpEtud[]> {
+    return this.http.get<AvoirEmpEtud[]>(`${this.apiServeurUrl}/AvoirEmpEtud/etu/${id}`);
+  }
+
   public getAvoirEmpEtudById(id: number): Observable<AvoirEmpEtud> {
     return this.http.get<AvoirEmpEtud>(`${this.apiServeurUrl}/AvoirEmpEtud/find/${id}`);
   }

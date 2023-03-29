@@ -27,28 +27,12 @@
               </tr>
               </thead>
               <tbody>
-              <tr>
-                <td class=" text-center">12345678</td>
-                <td class=" text-center">1</td>
+              <tr  *ngFor = "let i of list">
+                <td class=" text-center">{{i.numeroAppel}}</td>
+                <td class=" text-center">{{i.bureau.numBureau}}</td>
                 <td class=" text-center">
-                  <i class="tim-icons icon-pencil m-2"  (click)="modifier(1)"></i>
-                  <i class="tim-icons icon-trash-simple m-2" (click)="deleteModal()"></i>
-                </td>
-              </tr>
-              <tr>
-                <td class=" text-center">98765432</td>
-                <td class=" text-center">2</td>
-                <td class=" text-center">
-                  <i class = "tim-icons icon-pencil m-2"></i>
-                  <i class = "tim-icons icon-trash-simple m-2"></i>
-                </td>
-              </tr>
-              <tr>
-                <td class=" text-center">99887766</td>
-                <td class=" text-center">2</td>
-                <td class=" text-center">
-                  <i class = "tim-icons icon-pencil m-2"></i>
-                  <i class = "tim-icons icon-trash-simple m-2"></i>
+                  <i class="tim-icons icon-pencil m-2"  (click)="modifier(i.numeroAppel)"></i>
+                  <i class="tim-icons icon-trash-simple m-2" (click)="deleteModal(i.numeroAppel)"></i>
                 </td>
               </tr>
               </tbody>

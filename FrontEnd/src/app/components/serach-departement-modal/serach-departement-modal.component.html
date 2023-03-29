@@ -1,0 +1,35 @@
+<div class="" style="margin-top: -1%">
+
+
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Recherche D'une département</h5>
+    </div>
+    <div class="modal-body">
+        <div class="">
+            <table class=" table tablesorter" id="">
+                <thead class=" text-primary">
+                <tr>
+                    <th class=" text-center">Numéro Départment</th>
+                    <th class=" text-center">Intitulé Département</th>
+                    <th class=" text-center">Budget Départment (DT)</th>
+                    <th class=" text-center">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor = "let i of list">
+                    <td class=" text-center">{{i.numDep}}</td>
+                    <td class=" text-center">{{i.intituleDep}}</td>
+                    <td class=" text-center">{{i.budgetDep}} DT²</td>
+                    <td class=" text-center">
+                        <i class="tim-icons icon-tap-02 m-2" (click)="select(i.numDep)"></i>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="accept()">Ajouter Une Département</button>
+        <button type="button" class="btn btn-danger" (click)="close()">Annuler</button>
+    </div>
+</div>
