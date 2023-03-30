@@ -22,6 +22,7 @@
             </form>
         </div>
         <p class="text-danger text-center" *ngIf="!correcte" style="margin-top: 5%; margin-bottom: -5%;">Compte non trouvé!</p>
+        <p class="text-danger text-center" *ngIf="IncorrectPass" style="margin-top: 5%; margin-bottom: -5%;">Mot de passe incorrect!</p>
     </div>
     <div class="modal-footer">
         <button type="button" (click)="onSubmit(form)" [disabled]="form.invalid" class="btn btn-success">Confirmer</button>

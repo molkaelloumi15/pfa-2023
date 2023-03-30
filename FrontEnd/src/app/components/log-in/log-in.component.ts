@@ -20,6 +20,7 @@ export class LogInComponent implements OnInit {
         fonction: ''
     }
     correcte = true;
+    IncorrectPass = false;
 
     constructor(public modalRef: MdbModalRef<LogInComponent>,
                 public userService: UserService,
@@ -42,7 +43,7 @@ export class LogInComponent implements OnInit {
                     this.router.navigate(['dashboard']);
                     window.location.reload();
                 } else
-                    this.correcte = false;
+                    this.IncorrectPass = true;
 
             }, (error: HttpErrorResponse) => {
                 this.correcte = false;
