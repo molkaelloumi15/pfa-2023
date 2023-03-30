@@ -4,7 +4,6 @@ import {DeleteModal} from '../../components/delete-modal/delete-modal.component'
 import {MdbModalRef, MdbModalService} from 'mdb-angular-ui-kit/modal';
 import {Employe} from '../../Model/Employe';
 import {EmployeService} from '../../Services/employe.service';
-import {Etude} from '../../Model/Etude';
 import {HttpErrorResponse} from '@angular/common/http';
 
 @Component({
@@ -16,6 +15,7 @@ export class EmployeeComponent implements OnInit {
 
     modalRef: MdbModalRef<DeleteModal>;
     public list: Employe[] = [];
+    public display: Employe[] = [];
 
     constructor(private router: Router,
                 private modalService: MdbModalService,
@@ -30,6 +30,7 @@ export class EmployeeComponent implements OnInit {
         this.employeService.getEmployes().subscribe(
             (response: Employe[]) => {
                 this.list = response;
+                this.display =response;
             }, (error: HttpErrorResponse) => {
                 alert(error.message);
             }
@@ -60,6 +61,18 @@ export class EmployeeComponent implements OnInit {
                     }
                 );
         });
+    }
+
+    public search(key: string): void {
+        this.display = [];
+        for (const i of this.list) {
+            if (i.nomEmp.toLowerCase().indexOf(key.toLowerCase()) !== -1
+                ||i.fonctionEmp.toLowerCase().indexOf(key.toLowerCase()) !== -1
+                ||i.posteTelephonique.numeroAppel.toString().indexOf(key.toLowerCase()) !== -1
+            ) {
+                this.display.push(i);
+            }
+        }
     }
 
 }

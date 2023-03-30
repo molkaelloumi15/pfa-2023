@@ -13,9 +13,10 @@ import {SearchDirecteurModal} from './serach-directeur/search-directeur-modal.co
 import {SearchPosteModal} from './search-poste-modal/search-poste-modal.component';
 import {SearchProjetModal} from './search-projet-modal/search-projet-modal.component';
 import {SearchEtudeModal} from './search-etude-modal/search-etude-modal.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
-    imports: [CommonModule, RouterModule, NgbModule],
+    imports: [CommonModule, RouterModule, NgbModule,FormsModule],
     declarations: [
         FooterComponent,
         NavbarComponent,

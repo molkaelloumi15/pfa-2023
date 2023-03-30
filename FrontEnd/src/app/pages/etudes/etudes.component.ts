@@ -15,6 +15,7 @@ export class EtudesComponent implements OnInit {
 
     modalRef: MdbModalRef<DeleteModal>;
     public list: Etude[] = [];
+    public display: Etude[] = [];
 
     constructor(private router: Router,
                 private modalService: MdbModalService,
@@ -29,6 +30,7 @@ export class EtudesComponent implements OnInit {
         this.etudeService.getEtudes().subscribe(
             (response: Etude[]) => {
                 this.list = response;
+                this.display =response;
             }, (error: HttpErrorResponse) => {
                 alert(error.message);
             }
@@ -40,10 +42,10 @@ export class EtudesComponent implements OnInit {
     }
 
     modifier(id: number): void {
-        this.router.navigate(['/etude/etudeMod',id]);
+        this.router.navigate(['/etude/etudeMod', id]);
     }
 
-    deleteModal(id : number) {
+    deleteModal(id: number) {
         this.modalRef = this.modalService.open(DeleteModal);
         this.modalRef.onClose.subscribe((message: any) => {
             // tslint:disable-next-line:triple-equals
@@ -56,4 +58,13 @@ export class EtudesComponent implements OnInit {
         });
     }
 
+    public search(key: string): void {
+        this.display = [];
+        for (const i of this.list) {
+            if (i.titreEtude.toLowerCase().indexOf(key.toLowerCase()) !== -1
+            ) {
+                this.display.push(i);
+            }
+        }
+    }
 }

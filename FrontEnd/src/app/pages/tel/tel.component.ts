@@ -4,7 +4,6 @@ import {MdbModalRef, MdbModalService} from 'mdb-angular-ui-kit/modal';
 import {DeleteModal} from '../../components/delete-modal/delete-modal.component';
 import {PosteTelephonique} from '../../Model/PosteTelephonique';
 import {PosteTelephoniqueService} from '../../Services/poste-telephonique.service';
-import {Etude} from '../../Model/Etude';
 import {HttpErrorResponse} from '@angular/common/http';
 
 @Component({
@@ -16,6 +15,7 @@ export class TelComponent implements OnInit{
 
   modalRef: MdbModalRef<DeleteModal>;
   public list: PosteTelephonique[] = [];
+  public display: PosteTelephonique[] = [];
 
   constructor(private router: Router,
               private modalService: MdbModalService,
@@ -30,6 +30,7 @@ export class TelComponent implements OnInit{
     this.telService.getPosteTelephoniques().subscribe(
         (response: PosteTelephonique[]) => {
           this.list = response;
+          this.display =response;
         }, (error: HttpErrorResponse) => {
           alert(error.message);
         }
@@ -56,6 +57,18 @@ export class TelComponent implements OnInit{
             }
         );
     });
+  }
+
+  public search(key: string): void {
+    this.display = [];
+    for (const i of this.list) {
+      if (i.numeroAppel.toString().indexOf(key.toLowerCase()) !== -1
+          || i.bureau.departement.intituleDep.toLowerCase().indexOf(key.toLowerCase()) !== -1
+          || i.bureau.surface.toString().indexOf(key.toLowerCase()) !== -1
+      ) {
+        this.display.push(i);
+      }
+    }
   }
 
 }

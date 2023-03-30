@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {MdbModalRef, MdbModalService} from 'mdb-angular-ui-kit/modal';
 import {DeleteModal} from '../../components/delete-modal/delete-modal.component';
-import {Etude} from '../../Model/Etude';
 import {HttpErrorResponse} from '@angular/common/http';
 import {BureauService} from '../../Services/bureau.service';
 import {Bureau} from '../../Model/Bureau';
@@ -16,6 +15,7 @@ export class BureauComponent implements OnInit {
 
     modalRef: MdbModalRef<DeleteModal>;
     public list: Bureau[] = [];
+    public display: Bureau[] = [];
 
     constructor(private router: Router,
                 private modalService: MdbModalService,
@@ -30,6 +30,7 @@ export class BureauComponent implements OnInit {
         this.bureauService.getBureaux().subscribe(
             (response: Bureau[]) => {
                 this.list = response;
+                this.display =response;
             }, (error: HttpErrorResponse) => {
                 alert(error.message);
             }
@@ -61,5 +62,16 @@ export class BureauComponent implements OnInit {
                     }
                 );
         });
+    }
+
+    public search(key: string): void {
+        this.display = [];
+        for (const i of this.list) {
+            if (i.departement.intituleDep.toLowerCase().indexOf(key.toLowerCase()) !== -1
+                ||i.surface.toString().indexOf(key.toLowerCase()) !== -1
+            ) {
+                this.display.push(i);
+            }
+        }
     }
 }

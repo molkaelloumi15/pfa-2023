@@ -1,3 +1,4 @@
+<!--suppress AngularUndefinedBinding, AngularInvalidTemplateReferenceVariable -->
 <div class=" content">
   <div class=" row">
     <div class=" col-md-12">
@@ -9,7 +10,8 @@
           </div>
           <div class="col-5 text-center">
             <h5>Rechercher :</h5>
-            <input class="form-control form-rounded" type="text">
+            <input type="search" (ngModelChange)="search(key.value)" #key="ngModel" ngModel name="key"
+                   class="form-control form-rounded" placeholder="Rechercher">
           </div>
           <div class="col-2">
             <button class="btn btn-grey m-3 mt-4 text-dark" (click)="ajouter()">Ajouter</button>
@@ -27,7 +29,12 @@
               </tr>
               </thead>
               <tbody>
-              <tr *ngFor = "let i of list">
+              <h1 class="text-center mt-5" *ngIf="this.display.length == 0">
+
+                <span>Aucune Resultat Trouvé</span>
+
+              </h1>
+              <tr *ngFor = "let i of display">
                 <td class=" text-center">{{i.numDep}}</td>
                 <td class=" text-center">{{i.intituleDep}}</td>
                 <td class=" text-center">{{i.budgetDep}} DT²</td>

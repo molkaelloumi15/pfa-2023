@@ -15,6 +15,7 @@ export class ProjetComponent implements OnInit {
 
   modalRef: MdbModalRef<DeleteModal>;
   public list: ProjetRecherche[] = [];
+  public display: ProjetRecherche[] = [];
 
   constructor(private router: Router,
               private modalService: MdbModalService,
@@ -29,6 +30,7 @@ export class ProjetComponent implements OnInit {
     this.projetService.getProjetRecherches().subscribe(
         (response: ProjetRecherche[]) => {
           this.list = response;
+          this.display =response;
         }, (error: HttpErrorResponse) => {
           alert(error.message);
         }
@@ -59,5 +61,17 @@ export class ProjetComponent implements OnInit {
             }
         );
     });
+  }
+
+  public search(key: string): void {
+    this.display = [];
+    for (const i of this.list) {
+      if (i.intituleProjetRecherche.toLowerCase().indexOf(key.toLowerCase()) !== -1
+          || i.budgetProjetRecherche.toString().indexOf(key.toLowerCase()) !== -1
+          || i.departement.intituleDep.toLowerCase().indexOf(key.toLowerCase()) !== -1
+      ) {
+        this.display.push(i);
+      }
+    }
   }
 }

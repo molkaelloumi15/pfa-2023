@@ -4,7 +4,6 @@ import {HttpErrorResponse} from '@angular/common/http';
 import {Employe} from '../../../Model/Employe';
 import {EmployeService} from '../../../Services/employe.service';
 import {AvoirEmpService} from '../../../Services/avoir-emp.service';
-import {Etude} from '../../../Model/Etude';
 import {AvoirEmpEtud} from '../../../Model/AvoirEmpEtud';
 
 @Component({
@@ -15,7 +14,7 @@ import {AvoirEmpEtud} from '../../../Model/AvoirEmpEtud';
 export class EmpConComponent implements OnInit{
 
   employer : Employe;
-  etudes : Etude[] = [];
+  etudes : AvoirEmpEtud[] = [];
 
   constructor(
       private route: ActivatedRoute,
@@ -30,7 +29,7 @@ export class EmpConComponent implements OnInit{
           this.empEtudService.getAllAvoirEmpEtudsByEmp(result.numEmp).subscribe(
               (resultt : AvoirEmpEtud[]) => {
                   for (const i of resultt){
-                      this.etudes.push(i.etude);
+                      this.etudes.push(i);
                   }
               }
           );

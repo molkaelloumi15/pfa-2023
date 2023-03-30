@@ -4,7 +4,7 @@ import {Etude} from './Etude';
 export interface AvoirEmpEtud {
   employe: Employe;
   etude: Etude;
-  date: Date;
+  year: number;
   salaire: number;
 
 }

@@ -14,6 +14,7 @@ import {HttpErrorResponse} from '@angular/common/http';
 export class DepartmentComponent implements OnInit {
   modalRef: MdbModalRef<DeleteModal>;
   public list: Departement[] = [];
+  public display: Departement[] = [];
 
   constructor(private router: Router,
               private modalService: MdbModalService,
@@ -28,6 +29,7 @@ export class DepartmentComponent implements OnInit {
     this.deparService.getDepartements().subscribe(
         (response: Departement[]) => {
           this.list = response;
+          this.display =response;
         }, (error: HttpErrorResponse) => {
           alert(error.message);
         }
@@ -57,6 +59,17 @@ export class DepartmentComponent implements OnInit {
             }
         );
     });
+  }
+
+  public search(key: string): void {
+    this.display = [];
+    for (const i of this.list) {
+      if (i.intituleDep.toLowerCase().indexOf(key.toLowerCase()) !== -1
+          ||i.budgetDep.toString().toLowerCase().indexOf(key.toLowerCase()) !== -1
+      ) {
+        this.display.push(i);
+      }
+    }
   }
 
 }

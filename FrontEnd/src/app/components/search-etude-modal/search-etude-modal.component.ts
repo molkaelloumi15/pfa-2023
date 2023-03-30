@@ -3,6 +3,10 @@ import {MdbModalRef} from 'mdb-angular-ui-kit/modal';
 import {Router} from '@angular/router';
 import {Etude} from '../../Model/Etude';
 import {EtudeService} from '../../Services/etude.service';
+import {NgForm} from '@angular/forms';
+import {AvoirEmpService} from '../../Services/avoir-emp.service';
+import {AvoirEmpEtud} from '../../Model/AvoirEmpEtud';
+import {Employe} from '../../Model/Employe';
 
 @Component({
   selector: 'app-search-etude-modal',
@@ -11,7 +15,16 @@ import {EtudeService} from '../../Services/etude.service';
 })
 export class SearchEtudeModal implements OnInit{
   public list:Etude[] = [];
-
+  et:Etude = {
+    idEtude : 0,
+    titreEtude :''
+  }
+  public AEE: AvoirEmpEtud= {
+    etude : this.et,
+    employe: null,
+    salaire: 0,
+    year :new Date().getFullYear()
+  };
   constructor(public modalRef: MdbModalRef<SearchEtudeModal>,
               private etudeService: EtudeService ,
               private router: Router) {
@@ -35,6 +48,14 @@ export class SearchEtudeModal implements OnInit{
   }
 
   select(num: any) {
-    this.modalRef.close(num)
+    this.etudeService.getEtudeById(num).subscribe(
+        (result: Etude) => {
+          this.AEE.etude = result;
+        }
+    );
+  }
+
+  onSubmit() {
+    this.modalRef.close(this.AEE);
   }
 }
