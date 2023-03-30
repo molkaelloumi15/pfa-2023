@@ -7,42 +7,46 @@ import {NgForm} from '@angular/forms';
 import {HttpErrorResponse} from '@angular/common/http';
 
 @Component({
-  selector: 'app-log-in',
-  templateUrl: './log-in.component.html',
-  styleUrls: ['./log-in.component.scss']
+    selector: 'app-log-in',
+    templateUrl: './log-in.component.html',
+    styleUrls: ['./log-in.component.scss']
 })
-export class LogInComponent  implements OnInit {
+export class LogInComponent implements OnInit {
 
-  user: User = {
-    mail: '',
-    pass: '',
-    username: '',
-    fonction: ''
-  }
-  correcte=true;
+    user: User = {
+        mail: '',
+        pass: '',
+        username: '',
+        fonction: ''
+    }
+    correcte = true;
 
-  constructor(public modalRef: MdbModalRef<LogInComponent>,
-              public userService: UserService,
-              private router: Router) {
-  }
+    constructor(public modalRef: MdbModalRef<LogInComponent>,
+                public userService: UserService,
+                private router: Router) {
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
-  close() {
-    this.modalRef.close(false)
-  }
+    close() {
+        this.modalRef.close(false)
+    }
 
-  onSubmit(form: NgForm) {
-    this.userService.getUserByMail(this.user.mail).subscribe(
-        (result:User) => {
-          this.modalRef.close()
-          sessionStorage.setItem('currentUser',JSON.stringify(result));
-          this.router.navigate(['dashboard']);
-          window.location.reload();
-        },(error : HttpErrorResponse) => {
-          this.correcte = false;
-        }
-    );
-  }
+    onSubmit(form: NgForm) {
+        this.userService.getUserByMail(this.user.mail).subscribe(
+            (result: User) => {
+                if (this.user.pass === result.pass) {
+                    this.modalRef.close()
+                    sessionStorage.setItem('currentUser', JSON.stringify(result));
+                    this.router.navigate(['dashboard']);
+                    window.location.reload();
+                } else
+                    this.correcte = false;
+
+            }, (error: HttpErrorResponse) => {
+                this.correcte = false;
+            }
+        );
+    }
 }
