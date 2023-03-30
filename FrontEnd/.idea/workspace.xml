@@ -1,45 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b68cf767-e8e3-404f-83a4-1f03d0ff360b" name="Default Changelist" comment="Ajout , suppression">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Model/AvoirEmpEtud.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Model/AvoirEmpEtud.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Services/avoir-emp.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Services/avoir-emp.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/components.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/components.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/search-etude-modal/search-etude-modal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/search-etude-modal/search-etude-modal.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/search-etude-modal/search-etude-modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/search-etude-modal/search-etude-modal.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/bureau/bur-add/bur-add.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/bureau/bur-add/bur-add.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/bureau/bur-mod/bur-mod.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/bureau/bur-mod/bur-mod.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/bureau/bur-mod/bur-mod.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/bureau/bur-mod/bur-mod.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/bureau/bureau.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/bureau/bureau.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/bureau/bureau.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/bureau/bureau.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/department/dep-add/dep-add.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/department/dep-add/dep-add.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/department/dep-mod/dep-mod.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/department/dep-mod/dep-mod.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/department/dep-mod/dep-mod.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/department/dep-mod/dep-mod.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/department/department.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/department/department.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/department/department.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/department/department.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/employee/emp-add/emp-add.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/employee/emp-add/emp-add.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/employee/emp-con/emp-con.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/employee/emp-con/emp-con.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/employee/emp-con/emp-con.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/employee/emp-con/emp-con.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/employee/emp-mod/emp-mod.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/employee/emp-mod/emp-mod.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/employee/emp-mod/emp-mod.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/employee/emp-mod/emp-mod.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/employee/employee.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/employee/employee.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/employee/employee.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/employee/employee.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/etudes/ajoutEtud/ajout.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/etudes/ajoutEtud/ajout.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/etudes/etudes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/etudes/etudes.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/etudes/etudes.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/etudes/etudes.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/etudes/modificationEtud/modification.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/etudes/modificationEtud/modification.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/projet/pro-add/pro-add.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/projet/pro-add/pro-add.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/projet/pro-mod/pro-mod.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/projet/pro-mod/pro-mod.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/projet/pro-mod/pro-mod.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/projet/pro-mod/pro-mod.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/projet/projet.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/projet/projet.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/projet/projet.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/projet/projet.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tel/tel-add/tel-add.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tel/tel-add/tel-add.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tel/tel-mod/tel-mod.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tel/tel-mod/tel-mod.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tel/tel-mod/tel-mod.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tel/tel-mod/tel-mod.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tel/tel.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tel/tel.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tel/tel.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tel/tel.component.ts" afterDir="false" />
-    </list>
+    <list default="true" id="b68cf767-e8e3-404f-83a4-1f03d0ff360b" name="Default Changelist" comment="Recherche, Modification, Supression, ajout, consultation,&#10;CRUD terminé &#10;version 1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,7 +71,7 @@
       <workItem from="1679879565776" duration="9692000" />
       <workItem from="1679933470850" duration="2662000" />
       <workItem from="1680008939415" duration="22525000" />
-      <workItem from="1680129782727" duration="15298000" />
+      <workItem from="1680129782727" duration="15657000" />
     </task>
     <task id="LOCAL-00001" summary="fist Commit">
       <created>1679879671176</created>
@@ -139,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680059329478</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Recherche, Modification, Supression, ajout, consultation,&#10;CRUD terminé &#10;version 1">
+      <created>1680152427106</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680152427106</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +130,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="fist Commit" />
     <MESSAGE value="Ajout , suppression" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout , suppression" />
+    <MESSAGE value="Recherche, Modification, Supression, ajout, consultation,&#10;CRUD terminé &#10;version 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Recherche, Modification, Supression, ajout, consultation,&#10;CRUD terminé &#10;version 1" />
   </component>
 </project>

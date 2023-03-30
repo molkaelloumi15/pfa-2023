@@ -1,5 +1,8 @@
 package ENSIT.GeniInfo1.PFA1.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -9,16 +12,17 @@ import java.util.Date;
 public class AvoirEmpEtud implements Serializable {
 
     @Id
-    @ManyToOne(targetEntity = Employe.class, cascade = CascadeType.REMOVE)
+    @ManyToOne(targetEntity = Employe.class,cascade = CascadeType.DETACH)
     @JoinColumn(nullable = false, name = "numEmp")
     private Employe employe;
 
     @Id
-    @ManyToOne(targetEntity = Etude.class, cascade = CascadeType.REMOVE)
+    @ManyToOne(targetEntity = Etude.class,cascade = CascadeType.DETACH)
     @JoinColumn(nullable = false, name = "idEtude")
     private Etude etude;
 
-    private Date date;
+    @Id
+    private Integer year;
 
     private float salaire ;
 
@@ -40,12 +44,12 @@ public class AvoirEmpEtud implements Serializable {
         this.etude = etude;
     }
 
-    public Date getDate() {
-        return date;
+    public Integer getYear() {
+        return year;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setYear(Integer year) {
+        this.year = year;
     }
 
     public float getSalaire() {
@@ -61,7 +65,7 @@ public class AvoirEmpEtud implements Serializable {
         return "AvoirEmpEtud{" +
                 "employe=" + employe +
                 ", etude=" + etude +
-                ", date=" + date +
+                ", year=" + year +
                 ", salaire=" + salaire +
                 '}';
     }

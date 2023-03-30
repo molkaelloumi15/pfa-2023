@@ -1,37 +1,45 @@
 package ENSIT.GeniInfo1.PFA1.model;
 
-
 import java.io.Serializable;
 import java.util.Objects;
 
-
 public class AvoirEmpEtudPk implements Serializable {
 
-    private int employe;
-    private int etude;
+    private Integer employe;
+    private Integer etude;
+    private Integer year;
 
     public AvoirEmpEtudPk() {
     }
 
-    public AvoirEmpEtudPk(int employe, int etude) {
+    public AvoirEmpEtudPk(Integer employe, Integer etude, Integer year) {
         this.employe = employe;
         this.etude = etude;
+        this.year= year;
     }
 
-    public int getEmploye() {
+    public Integer getEmploye() {
         return employe;
     }
 
-    public void setEmploye(int employe) {
+    public void setEmploye(Integer employe) {
         this.employe = employe;
     }
 
-    public int getEtude() {
+    public Integer getEtude() {
         return etude;
     }
 
-    public void setEtude(int etude) {
+    public void setEtude(Integer etude) {
         this.etude = etude;
+    }
+
+    public Integer getYear() {
+        return year;
+    }
+
+    public void setDate(Integer year) {
+        this.year = year;
     }
 
     @Override
@@ -39,11 +47,11 @@ public class AvoirEmpEtudPk implements Serializable {
         if (this == o) return true;
         if (!(o instanceof AvoirEmpEtudPk)) return false;
         AvoirEmpEtudPk that = (AvoirEmpEtudPk) o;
-        return employe == that.employe && etude == that.etude;
+        return Objects.equals(employe, that.employe) && Objects.equals(etude, that.etude) && Objects.equals(year, that.year);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(employe, etude);
+        return Objects.hash(employe, etude, year);
     }
 }
