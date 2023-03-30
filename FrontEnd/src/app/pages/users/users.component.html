@@ -5,9 +5,8 @@
             <div class=" card card-plain">
                 <div class="row card-header">
                     <div class="col">
-                        <h4 class=" card-title">Gestion des Etudes</h4>
-                        <p class=" category">Listes Des Etudes</p>
-
+                        <h4 class=" card-title">Gestion des Utilisateur</h4>
+                        <p class=" category">Listes Des Utilisateurs</p>
                     </div>
 
                     <div class="col-5 text-center">
@@ -15,17 +14,15 @@
                         <input type="search" (ngModelChange)="search(key.value)" #key="ngModel" ngModel name="key"
                                class="form-control form-rounded" placeholder="Rechercher">
                     </div>
-                    <div class="col-2">
-                        <button class="btn btn-grey m-3 mt-4 text-dark" [disabled]="this.currentUser.fonction=='Rechercheur'" (click)="ajouter()">Ajouter</button>
-                    </div>
                 </div>
                 <div class=" card-body">
                     <div class=" table-responsive">
                         <table class=" table tablesorter" id="">
                             <thead class=" text-primary">
                             <tr>
-                                <th class=" text-center">Id Etude</th>
-                                <th class=" text-center">Titre Etude</th>
+                                <th class=" text-center">UserName</th>
+                                <th class=" text-center">Mail</th>
+                                <th class=" text-center">Fonction</th>
                                 <th class=" text-center">Action</th>
                             </tr>
                             </thead>
@@ -36,12 +33,16 @@
 
                             </h1>
                             <tr *ngFor = "let i of display">
-                                <td class=" text-center">{{i.idEtude}}</td>
-                                <td class=" text-center">{{i.titreEtude}}</td>
+                                <td class=" text-center">{{i.username}}</td>
+                                <td class=" text-center">{{i.mail}}</td>
                                 <td class=" text-center">
-
-                                    <i *ngIf="this.currentUser.fonction !=='Rechercheur'" class="tim-icons icon-pencil m-2" (click)="modifier(i.idEtude)"></i>
-                                    <i *ngIf="this.currentUser.fonction !=='Rechercheur'" class="tim-icons icon-trash-simple m-2" (click)="deleteModal(i.idEtude)"></i>
+                                    <select  class="col form-select" name="fonctione" #fonctione="ngModel"
+                                             [(ngModel)]="i.fonction" required ngModel (change)="newjob(i)">
+                                        <option *ngFor="let f of this.fonction"  [value]="f" >{{f}}</option>
+                                    </select>
+                                </td>
+                                <td class=" text-center">
+                                    <i class="tim-icons icon-trash-simple m-2" (click)="deleteModal(i.idEtude)"></i>
                                 </td>
                             </tr>
                             </tbody>

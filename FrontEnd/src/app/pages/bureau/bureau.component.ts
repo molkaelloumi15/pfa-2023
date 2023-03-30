@@ -5,6 +5,7 @@ import {DeleteModal} from '../../components/delete-modal/delete-modal.component'
 import {HttpErrorResponse} from '@angular/common/http';
 import {BureauService} from '../../Services/bureau.service';
 import {Bureau} from '../../Model/Bureau';
+import {User} from '../../Model/User';
 
 @Component({
     selector: 'app-bureau',
@@ -16,13 +17,14 @@ export class BureauComponent implements OnInit {
     modalRef: MdbModalRef<DeleteModal>;
     public list: Bureau[] = [];
     public display: Bureau[] = [];
-
+    currentUser: User;
     constructor(private router: Router,
                 private modalService: MdbModalService,
                 private bureauService: BureauService) {
     }
 
     ngOnInit(): void {
+        this.currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
         this.getBureau();
     }
 

@@ -1,70 +1,35 @@
-import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from '@angular/router';
-import { Observable } from 'rxjs';
-
-@Injectable({
-  providedIn: 'root'
-})
-export class AuthGuard implements CanActivate {
-  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
-  }
-
-}
-/*import {Injectable} from '@angular/core';
-import {CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router} from '@angular/router';
+import {Injectable} from '@angular/core';
+import {ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree} from '@angular/router';
 import {Observable} from 'rxjs';
-import * as firebase from 'firebase';
-import {UserService} from './user.service';
-import {User} from '../model/User';
+import {User} from '../Model/User';
+import {SignInComponent} from '../components/sign-in/sign-in.component';
+import {MdbModalService} from 'mdb-angular-ui-kit/modal';
+import {LogInComponent} from '../components/log-in/log-in.component';
 
 @Injectable({
     providedIn: 'root'
 })
-
 export class AuthGuard implements CanActivate {
 
-    constructor(private router: Router,
-                private userService: UserService) {
+    constructor(private modalService: MdbModalService) {
 
     }
 
     canActivate(
         route: ActivatedRouteSnapshot,
         state: RouterStateSnapshot
-    ): Observable<boolean> | Promise<boolean> | boolean {
+    ): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
         return new Promise(
             (resolve, reject) => {
-                firebase.auth().onAuthStateChanged(
-                    (user) => {
-                        if (user) {
-                            if (this.userService.getUserByUid(user.uid).subscribe(
-                                (response: User) => {
-                                    if (response.enabled === true) {
-                                        resolve(true);
-                                    } else {
-                                        this.router.navigate(['/confirmation']);
-                                    }
-                                }, error => {
-                                    this.router.navigate(['/auth/signup']);
-                                    resolve(false);
-                                    alert(error.message);
-                                }
-                            )) {
-                            }
-                        } else {
-                            this.router.navigate(['/auth/signup']);
-                            resolve(false);
-                        }
-                    }
-                );
-                // resolve(true);
+                const currentUser: User = JSON.parse(sessionStorage.getItem('currentUser'))
+                if (currentUser !== null)
+                    resolve(true);
+                else {
+                    this.modalService.open(LogInComponent);
+                    resolve(false);
+                }
             }
         );
-
     }
 
-
-}*/
+}

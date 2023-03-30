@@ -38,47 +38,51 @@ import {ProConComponent} from '../../pages/projet/pro-con/pro-con.component';
 import {TelAddComponent} from '../../pages/tel/tel-add/tel-add.component';
 import {TelModComponent} from '../../pages/tel/tel-mod/tel-mod.component';
 import {ComponentsModule} from '../../components/components.module';
+import {UsersComponent} from '../../pages/users/users.component';
+import {MyProfileComponent} from '../../pages/users/my-profile/my-profile.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forChild(AdminLayoutRoutes),
-    FormsModule,
-    HttpClientModule,
-    NgbModule,
-    ComponentsModule,
-  ],
-  declarations: [
-    DashboardComponent,
-    UserComponent,
-    TablesComponent,
-    IconsComponent,
-    TypographyComponent,
-    NotificationsComponent,
-    MapComponent,
-    DepartmentComponent,
-    EtudesComponent,
-    TelComponent,
-    ProjetComponent,
-    BureauComponent,
-    EmployeeComponent,
-    EtudAjoutComponent,
-    EtudModificationComponent,
-    EmpAddComponent,
-    EmpModComponent,
-    EmpConComponent,
-    DepAddComponent,
-    DepModComponent,
-    DepConComponent,
-    BurAddComponent,
-    BurModComponent,
-    BurConComponent,
-    ProAddComponent,
-    ProModComponent,
-    ProConComponent,
-    TelAddComponent,
-    TelModComponent
-  ]
+    imports: [
+        CommonModule,
+        RouterModule.forChild(AdminLayoutRoutes),
+        FormsModule,
+        HttpClientModule,
+        NgbModule,
+        ComponentsModule,
+    ],
+    declarations: [
+        DashboardComponent,
+        UserComponent,
+        TablesComponent,
+        IconsComponent,
+        TypographyComponent,
+        NotificationsComponent,
+        MapComponent,
+        DepartmentComponent,
+        EtudesComponent,
+        TelComponent,
+        ProjetComponent,
+        BureauComponent,
+        EmployeeComponent,
+        EtudAjoutComponent,
+        EtudModificationComponent,
+        EmpAddComponent,
+        EmpModComponent,
+        EmpConComponent,
+        DepAddComponent,
+        DepModComponent,
+        DepConComponent,
+        BurAddComponent,
+        BurModComponent,
+        BurConComponent,
+        ProAddComponent,
+        ProModComponent,
+        ProConComponent,
+        TelAddComponent,
+        TelModComponent,
+        UsersComponent,
+        MyProfileComponent
+    ]
 })
 export class AdminLayoutModule {
 }

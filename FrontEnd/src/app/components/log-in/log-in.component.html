@@ -1,0 +1,30 @@
+<!--suppress AngularInvalidTemplateReferenceVariable, AngularUndefinedBinding -->
+<div class="" style="margin-top: -1%">
+
+
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Créer Un Compte</h5>
+    </div>
+    <div class="modal-body">
+        <div class="">
+            <form #form="ngForm" (submit)="onSubmit(form)">
+                <div class="row mt-3 mx-2"> <label class="form-label col">Email Utilisateur</label>
+                    <input class="input-group-text form-control mx-auto col "
+                           placeholder="Mail Utilisateur" type="email" [(ngModel)] = "user.mail"
+
+                           name="mail" #mail="ngModel" required ngModel>
+                </div>
+                <div class="row mt-3 mx-2"> <label class="form-label col">Mot de passe Utilisateur</label>
+                    <input class="input-group-text form-control mx-auto col" [(ngModel)] = "user.pass"
+                           placeholder="Mot de passe" type="password"
+                           name="pass" #pass="ngModel" required ngModel>
+                </div>
+            </form>
+        </div>
+        <p class="text-danger text-center" *ngIf="!correcte" style="margin-top: 5%; margin-bottom: -5%;">Compte non trouvé!</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" (click)="onSubmit(form)" [disabled]="form.invalid" class="btn btn-success">Confirmer</button>
+        <button type="button" class="btn btn-danger" (click)="close()">Annuler</button>
+    </div>
+</div>

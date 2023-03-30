@@ -5,6 +5,7 @@ import {DeleteModal} from '../../components/delete-modal/delete-modal.component'
 import {EtudeService} from '../../Services/etude.service';
 import {Etude} from '../../Model/Etude';
 import {HttpErrorResponse} from '@angular/common/http';
+import {User} from '../../Model/User';
 
 @Component({
     selector: 'app-etudes',
@@ -16,13 +17,14 @@ export class EtudesComponent implements OnInit {
     modalRef: MdbModalRef<DeleteModal>;
     public list: Etude[] = [];
     public display: Etude[] = [];
-
+    currentUser: User;
     constructor(private router: Router,
                 private modalService: MdbModalService,
                 private etudeService: EtudeService) {
     }
 
     ngOnInit(): void {
+        this.currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
         this.getEtude();
     }
 

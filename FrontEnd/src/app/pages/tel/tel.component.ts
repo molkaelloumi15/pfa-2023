@@ -5,6 +5,7 @@ import {DeleteModal} from '../../components/delete-modal/delete-modal.component'
 import {PosteTelephonique} from '../../Model/PosteTelephonique';
 import {PosteTelephoniqueService} from '../../Services/poste-telephonique.service';
 import {HttpErrorResponse} from '@angular/common/http';
+import {User} from '../../Model/User';
 
 @Component({
   selector: 'app-tel',
@@ -16,13 +17,14 @@ export class TelComponent implements OnInit{
   modalRef: MdbModalRef<DeleteModal>;
   public list: PosteTelephonique[] = [];
   public display: PosteTelephonique[] = [];
-
+  currentUser: User;
   constructor(private router: Router,
               private modalService: MdbModalService,
               private telService: PosteTelephoniqueService) {
   }
 
   ngOnInit(): void {
+    this.currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
     this.getTel();
   }
 

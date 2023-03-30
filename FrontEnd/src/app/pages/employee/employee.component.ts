@@ -5,6 +5,7 @@ import {MdbModalRef, MdbModalService} from 'mdb-angular-ui-kit/modal';
 import {Employe} from '../../Model/Employe';
 import {EmployeService} from '../../Services/employe.service';
 import {HttpErrorResponse} from '@angular/common/http';
+import {User} from '../../Model/User';
 
 @Component({
     selector: 'app-employee',
@@ -16,13 +17,14 @@ export class EmployeeComponent implements OnInit {
     modalRef: MdbModalRef<DeleteModal>;
     public list: Employe[] = [];
     public display: Employe[] = [];
-
+    currentUser: User;
     constructor(private router: Router,
                 private modalService: MdbModalService,
                 private employeService: EmployeService) {
     }
 
     ngOnInit(): void {
+        this.currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
         this.getEmployes();
     }
 

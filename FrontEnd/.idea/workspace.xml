@@ -1,7 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b68cf767-e8e3-404f-83a4-1f03d0ff360b" name="Default Changelist" comment="Recherche, Modification, Supression, ajout, consultation,&#10;CRUD terminé &#10;version 1" />
+    <list default="true" id="b68cf767-e8e3-404f-83a4-1f03d0ff360b" name="Default Changelist" comment="Recherche, Modification, Supression, ajout, consultation,&#10;CRUD terminé &#10;version 1">
+      <change afterPath="$PROJECT_DIR$/src/app/Model/User.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/Services/spec.ts/user.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/Services/user.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/log-in/log-in.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/log-in/log-in.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/log-in/log-in.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/log-in/log-in.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/sign-in/sign-in.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/sign-in/sign-in.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/sign-in/sign-in.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/sign-in/sign-in.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/users/my-profile/my-profile.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/users/my-profile/my-profile.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/users/my-profile/my-profile.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/users/my-profile/my-profile.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/users/users.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/users/users.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/users/users.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/users/users.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PFA1Ensit/src/main/java/ENSIT/GeniInfo1/PFA1/controller/UserCtrl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PFA1Ensit/src/main/java/ENSIT/GeniInfo1/PFA1/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PFA1Ensit/src/main/java/ENSIT/GeniInfo1/PFA1/repository/UserRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PFA1Ensit/src/main/java/ENSIT/GeniInfo1/PFA1/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Services/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Services/auth.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/components.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/components.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/navbar/navbar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/navbar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/navbar/navbar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/search-bureau/search-bureau-modal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/search-bureau/search-bureau-modal.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layouts/admin-layout/admin-layout.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/admin-layout/admin-layout.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layouts/admin-layout/admin-layout.routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/admin-layout/admin-layout.routing.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/bureau/bureau.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/bureau/bureau.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/bureau/bureau.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/bureau/bureau.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/department/department.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/department/department.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/department/department.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/department/department.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/employee/employee.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/employee/employee.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/employee/employee.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/employee/employee.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/etudes/etudes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/etudes/etudes.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/etudes/etudes.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/etudes/etudes.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/tel/tel.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tel/tel.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/tel/tel.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tel/tel.component.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +68,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/U-BooK/U-BooK.tn/ubook" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/Model" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -37,6 +79,14 @@
   </component>
   <component name="ReaderModeSettings">
     <option name="enabled" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mahdi\Desktop\ENSIT\pfa-2023\FrontEnd\src\app\Model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mahdi\Desktop\ENSIT\pfa-2023\FrontEnd\src\app\Services\spec.ts" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="Tests (black-dashboard-angular)" type="JavaScriptTestRunnerKarma">
@@ -71,7 +121,8 @@
       <workItem from="1679879565776" duration="9692000" />
       <workItem from="1679933470850" duration="2662000" />
       <workItem from="1680008939415" duration="22525000" />
-      <workItem from="1680129782727" duration="15657000" />
+      <workItem from="1680129782727" duration="16253000" />
+      <workItem from="1680187249402" duration="16538000" />
     </task>
     <task id="LOCAL-00001" summary="fist Commit">
       <created>1679879671176</created>

@@ -5,6 +5,7 @@ import {MdbModalRef, MdbModalService} from 'mdb-angular-ui-kit/modal';
 import {Departement} from '../../Model/Departement';
 import {DepartementService} from '../../Services/departement.service';
 import {HttpErrorResponse} from '@angular/common/http';
+import {User} from '../../Model/User';
 
 @Component({
   selector: 'app-department',
@@ -15,13 +16,14 @@ export class DepartmentComponent implements OnInit {
   modalRef: MdbModalRef<DeleteModal>;
   public list: Departement[] = [];
   public display: Departement[] = [];
-
+  currentUser: User;
   constructor(private router: Router,
               private modalService: MdbModalService,
               private deparService: DepartementService) {
   }
 
   ngOnInit(): void {
+    this.currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
     this.getDept();
   }
 

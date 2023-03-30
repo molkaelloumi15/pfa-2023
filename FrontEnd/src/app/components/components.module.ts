@@ -14,6 +14,8 @@ import {SearchPosteModal} from './search-poste-modal/search-poste-modal.componen
 import {SearchProjetModal} from './search-projet-modal/search-projet-modal.component';
 import {SearchEtudeModal} from './search-etude-modal/search-etude-modal.component';
 import {FormsModule} from '@angular/forms';
+import { LogInComponent } from './log-in/log-in.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 @NgModule({
     imports: [CommonModule, RouterModule, NgbModule,FormsModule],
@@ -27,7 +29,9 @@ import {FormsModule} from '@angular/forms';
         SearchDirecteurModal,
         SearchPosteModal,
         SearchProjetModal,
-        SearchEtudeModal
+        SearchEtudeModal,
+        LogInComponent,
+        SignInComponent
     ],
     exports: [FooterComponent, NavbarComponent, SidebarComponent, DeleteModal]
 })

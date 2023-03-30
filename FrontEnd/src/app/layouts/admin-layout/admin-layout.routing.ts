@@ -29,6 +29,9 @@ import {TelModComponent} from '../../pages/tel/tel-mod/tel-mod.component';
 import {ProAddComponent} from '../../pages/projet/pro-add/pro-add.component';
 import {ProModComponent} from '../../pages/projet/pro-mod/pro-mod.component';
 import {ProConComponent} from '../../pages/projet/pro-con/pro-con.component';
+import {AuthGuard} from '../../Services/auth.guard';
+import {UsersComponent} from '../../pages/users/users.component';
+import {MyProfileComponent} from '../../pages/users/my-profile/my-profile.component';
 // import { RtlComponent } from "../../pages/rtl/rtl.component";
 
 export const AdminLayoutRoutes: Routes = [
@@ -37,27 +40,29 @@ export const AdminLayoutRoutes: Routes = [
   { path: 'maps', component: MapComponent },
   { path: 'notifications', component: NotificationsComponent },
   { path: 'user', component: UserComponent },
+  { path: 'users', component: UsersComponent },
+  { path: 'profile', component: MyProfileComponent },
   { path: 'tables', component: TablesComponent },
-  { path: 'department', component: DepartmentComponent },
-  { path: 'department/depAdd', component: DepAddComponent },
-  { path: 'department/depMod/:id', component: DepModComponent },
-  { path: 'department/depCon/:id', component: DepConComponent },
+  { path: 'department', canActivate: [AuthGuard], component: DepartmentComponent },
+  { path: 'department/depAdd', canActivate: [AuthGuard], component: DepAddComponent },
+  { path: 'department/depMod/:id', canActivate: [AuthGuard], component: DepModComponent },
+  { path: 'department/depCon/:id', canActivate: [AuthGuard], component: DepConComponent },
   { path: 'projet_recherche', component: ProjetComponent },
-  { path: 'projet_recherche/proAdd', component: ProAddComponent },
-  { path: 'projet_recherche/proMod/:id', component: ProModComponent },
-  { path: 'projet_recherche/proCon/:id', component: ProConComponent },
-  { path: 'emp', component: EmployeeComponent },
-  { path: 'emp/empAdd', component: EmpAddComponent },
-  { path: 'emp/empMod/:id', component: EmpModComponent },
-  { path: 'emp/empCon/:id', component: EmpConComponent },
-  { path: 'tel', component: TelComponent },
-  { path: 'tel/telAdd', component: TelAddComponent },
-  { path: 'tel/telMod/:id', component: TelModComponent },
-  { path: 'etude', component: EtudesComponent },
-  { path: 'etude/etudeAdd', component: EtudAjoutComponent },
-  { path: 'etude/etudeMod/:id', component: EtudModificationComponent },
-  { path: 'bureau', component: BureauComponent },
-  { path: 'bureau/burAdd', component: BurAddComponent },
-  { path: 'bureau/burMod/:id', component: BurModComponent },
-  { path: 'bureau/burCon/:id', component: BurConComponent }
+  { path: 'projet_recherche/proAdd', canActivate: [AuthGuard], component: ProAddComponent },
+  { path: 'projet_recherche/proMod/:id', canActivate: [AuthGuard], component: ProModComponent },
+  { path: 'projet_recherche/proCon/:id', canActivate: [AuthGuard], component: ProConComponent },
+  { path: 'emp', canActivate: [AuthGuard], component: EmployeeComponent },
+  { path: 'emp/empAdd', canActivate: [AuthGuard], component: EmpAddComponent },
+  { path: 'emp/empMod/:id', canActivate: [AuthGuard], component: EmpModComponent },
+  { path: 'emp/empCon/:id', canActivate: [AuthGuard], component: EmpConComponent },
+  { path: 'tel', canActivate: [AuthGuard], component: TelComponent },
+  { path: 'tel/telAdd', canActivate: [AuthGuard], component: TelAddComponent },
+  { path: 'tel/telMod/:id', canActivate: [AuthGuard], component: TelModComponent },
+  { path: 'etude', canActivate: [AuthGuard], component: EtudesComponent },
+  { path: 'etude/etudeAdd', canActivate: [AuthGuard], component: EtudAjoutComponent },
+  { path: 'etude/etudeMod/:id', canActivate: [AuthGuard], component: EtudModificationComponent },
+  { path: 'bureau', canActivate: [AuthGuard], component: BureauComponent },
+  { path: 'bureau/burAdd', canActivate: [AuthGuard], component: BurAddComponent },
+  { path: 'bureau/burMod/:id', canActivate: [AuthGuard], component: BurModComponent },
+  { path: 'bureau/burCon/:id', canActivate: [AuthGuard], component: BurConComponent }
 ];
