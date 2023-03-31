@@ -42,11 +42,14 @@ export class LogInComponent implements OnInit {
                     sessionStorage.setItem('currentUser', JSON.stringify(result));
                     this.router.navigate(['dashboard']);
                     window.location.reload();
-                } else
+                } else {
                     this.IncorrectPass = true;
+                    this.correcte = true;
+                }
 
             }, (error: HttpErrorResponse) => {
                 this.correcte = false;
+                this.IncorrectPass = false;
             }
         );
     }

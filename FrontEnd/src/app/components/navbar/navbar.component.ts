@@ -35,8 +35,14 @@ export class NavbarComponent implements OnInit, OnDestroy {
     private toggleButton: any;
     private sidebarVisible: boolean;
     authentifier: boolean;
-    user: User;
+    user: User = {
+        mail: '',
+        pass: '',
+        fonction: '',
+        username: ''
+    };
     fonction = '';
+    displayingName = '';
     public isCollapsed = true;
 
     closeResult: string;
@@ -56,10 +62,13 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
     ngOnInit() {
         this.user = JSON.parse(sessionStorage.getItem('currentUser'));
-        if (this.user !== null)
+        if (this.user !== null) {
             this.fonction = this.user.fonction;
-        else
-            this.fonction = 'internaute'
+            this.displayingName = this.user.username;
+        } else {
+            this.fonction = 'internaute';
+            this.displayingName = '';
+        }
         this.authentifier = this.user === null;
         window.addEventListener('resize', this.updateColor);
         this.listTitles = ROUTES.filter(listTitle => listTitle);
