@@ -41,8 +41,6 @@ export class NavbarComponent implements OnInit, OnDestroy {
         fonction: '',
         username: ''
     };
-    fonction = '';
-    displayingName = '';
     public isCollapsed = true;
 
     closeResult: string;
@@ -61,15 +59,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
     };
 
     ngOnInit() {
-        this.user = JSON.parse(sessionStorage.getItem('currentUser'));
-        if (this.user !== null) {
-            this.fonction = this.user.fonction;
-            this.displayingName = this.user.username;
-        } else {
-            this.fonction = 'internaute';
-            this.displayingName = '';
+        // this.user = JSON.parse(sessionStorage.getItem('currentUser'));
+        if (JSON.parse(sessionStorage.getItem('currentUser')) !== null) {
+            this.user = JSON.parse(sessionStorage.getItem('currentUser'));
         }
-        this.authentifier = this.user === null;
+        this.authentifier = JSON.parse(sessionStorage.getItem('currentUser')) === null;
         window.addEventListener('resize', this.updateColor);
         this.listTitles = ROUTES.filter(listTitle => listTitle);
         const navbar: HTMLElement = this.element.nativeElement;
