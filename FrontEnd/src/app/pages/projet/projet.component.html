@@ -14,7 +14,7 @@
                    class="form-control form-rounded" placeholder="Rechercher">
           </div>
           <div class="col-2">
-            <button class="btn btn-grey m-3 mt-4 text-dark" (click)="ajouter()">Ajouter</button>
+            <button class="btn btn-grey m-3 mt-4 text-dark" [disabled]="this.currentUser.fonction=='Rechercheur'"  (click)="ajouter()">Ajouter</button>
           </div>
 
         </div>
@@ -43,8 +43,8 @@
                 <td class=" text-center">{{i.departement.intituleDep}}</td>
                 <td class=" text-center">
                   <i class="tim-icons icon-alert-circle-exc m-2"  (click)="consulter(i.numProjetRecherche)"></i>
-                  <i class="tim-icons icon-pencil m-2"  (click)="modifier(i.numProjetRecherche)"></i>
-                  <i class="tim-icons icon-trash-simple m-2" (click)="deleteModal(i.numProjetRecherche)"></i>
+                  <i  *ngIf="this.currentUser.fonction !=='Rechercheur'" class="tim-icons icon-pencil m-2"  (click)="modifier(i.numProjetRecherche)"></i>
+                  <i  *ngIf="this.currentUser.fonction !=='Rechercheur'" class="tim-icons icon-trash-simple m-2" (click)="deleteModal(i.numProjetRecherche)"></i>
                 </td>
               </tr>
               </tbody>
