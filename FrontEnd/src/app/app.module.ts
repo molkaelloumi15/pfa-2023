@@ -14,6 +14,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { ComponentsModule } from './components/components.module';
 import {MdbModalModule} from 'mdb-angular-ui-kit/modal';
+import { IndexComponent } from './pages/index/index.component';
+import { ErrorComponent } from './pages/error/error.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import {MdbModalModule} from 'mdb-angular-ui-kit/modal';
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    AuthLayoutComponent
+    AuthLayoutComponent,
+    IndexComponent,
+    ErrorComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

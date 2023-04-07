@@ -21,7 +21,7 @@ export class UsersComponent implements OnInit {
     public list: User[] = [];
     public display: User[] = [];
     modalRef: MdbModalRef<DeleteModal>;
-    fonction = ['Amdinistrateur', 'Rechercheur', 'Directeur']
+    fonction = ['Amdinistrateur', 'Visiteur', 'Directeur']
 
     ngOnInit(): void {
         this.getUsers();

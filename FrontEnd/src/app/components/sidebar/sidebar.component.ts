@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 declare interface RouteInfo {
   path: string;
@@ -68,7 +69,7 @@ export const ROUTES: RouteInfo[] = [
 export class SidebarComponent implements OnInit {
   menuItems: any[];
 
-  constructor() {
+  constructor(private router:Router) {
   }
 
   ngOnInit() {
@@ -81,4 +82,9 @@ export class SidebarComponent implements OnInit {
     }
     return true;
   }
+
+  index(){
+    this.router.navigate(['']);
+  }
+
 }

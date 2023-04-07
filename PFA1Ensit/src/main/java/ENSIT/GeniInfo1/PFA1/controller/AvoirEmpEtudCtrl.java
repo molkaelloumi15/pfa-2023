@@ -26,6 +26,12 @@ public class AvoirEmpEtudCtrl {
         return new ResponseEntity<>(AvoirEmpEtuds, HttpStatus.OK);
     }
 
+    @GetMapping("/empByEtu")
+    public ResponseEntity<List<Object[]>> getAllAvoirEmpByEtuds (){
+        List<Object[]> AvoirEmpEtuds= this.AvoirEmpEtudService.findAllAvoirEmpByEtud();
+        return new ResponseEntity<>(AvoirEmpEtuds, HttpStatus.OK);
+    }
+
     @GetMapping("/emp/{emp}")
     public ResponseEntity<List<AvoirEmpEtud>> getAllAvoirEmpEtudsByEmp (@PathVariable("emp") Integer emp){
         List<AvoirEmpEtud> AvoirEmpEtuds= this.AvoirEmpEtudService.findAllByEmp(emp);

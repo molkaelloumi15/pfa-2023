@@ -5,12 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
+import {IndexComponent} from './pages/index/index.component';
+import {ErrorComponent} from './pages/error/error.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full'
+    component: IndexComponent
   },
   {
     path: '',
@@ -33,7 +34,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'dashboard'
+    component:ErrorComponent
   }
 ];
 

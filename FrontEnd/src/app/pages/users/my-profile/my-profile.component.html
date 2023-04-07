@@ -39,7 +39,7 @@
                         </div>
                     </div>
                     <div class="">
-                        <input type="submit" [disabled]="form.invalid" class="btn btn-danger float-lg-end mx-3" value="Mise à jour">
+                        <input type="submit" [disabled]="form.invalid || this.currentUser.pass !== passe" class="btn btn-danger float-lg-end mx-3" value="Mise à jour">
                         <!--            <h5 class="text-success col h4">Nouveau Projet De Recherche Ajouté Avec Succée</h5>-->
                     </div>
                 </form>

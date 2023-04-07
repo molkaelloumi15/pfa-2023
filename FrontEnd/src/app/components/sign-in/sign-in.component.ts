@@ -17,7 +17,7 @@ export class SignInComponent implements OnInit {
         mail: '',
         pass: '',
         username: '',
-        fonction: 'Rechercheur'
+        fonction: 'Visiteur'
     }
     passe = '';
     goodmail = false;

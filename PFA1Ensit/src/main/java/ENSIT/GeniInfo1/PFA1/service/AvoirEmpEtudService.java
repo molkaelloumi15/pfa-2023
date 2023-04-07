@@ -33,6 +33,10 @@ public class AvoirEmpEtudService {
         return this.AvoirEmpEtudRepo.findAll();
     }
 
+    public List<Object[]> findAllAvoirEmpByEtud() {
+        return this.AvoirEmpEtudRepo.countEmployeByEtude();
+    }
+
     public AvoirEmpEtud updateAvoirEmpEtud(AvoirEmpEtud AvoirEmpEtud) {
         return AvoirEmpEtudRepo.save(AvoirEmpEtud);
     }

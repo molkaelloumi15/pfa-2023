@@ -50,7 +50,7 @@ export const AdminLayoutRoutes: Routes = [
   { path: 'projet_recherche', component: ProjetComponent },
   { path: 'projet_recherche/proAdd', canActivate: [AuthGuard], component: ProAddComponent },
   { path: 'projet_recherche/proMod/:id', canActivate: [AuthGuard], component: ProModComponent },
-  { path: 'projet_recherche/proCon/:id', canActivate: [AuthGuard], component: ProConComponent },
+  { path: 'projet_recherche/proCon/:id', component: ProConComponent },
   { path: 'emp', canActivate: [AuthGuard], component: EmployeeComponent },
   { path: 'emp/empAdd', canActivate: [AuthGuard], component: EmpAddComponent },
   { path: 'emp/empMod/:id', canActivate: [AuthGuard], component: EmpModComponent },

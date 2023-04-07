@@ -19,6 +19,17 @@ public class EmployeCtrl {
         List<Employe> Employes= this.EmployeService.findAllEmploye();
         return new ResponseEntity<>(Employes, HttpStatus.OK);
     }
+    @GetMapping("/projets")
+    public ResponseEntity<List<Object[]>> countEmployeByProjetRecherche (){
+        List<Object[]> Employes= this.EmployeService.countEmployeByProjetRecherche();
+        return new ResponseEntity<>(Employes, HttpStatus.OK);
+    }
+
+    @GetMapping("/dep")
+    public ResponseEntity<List<Object[]>> countEmployeByDep (){
+        List<Object[]> Employes= this.EmployeService.countEmployeByDep();
+        return new ResponseEntity<>(Employes, HttpStatus.OK);
+    }
 
     @GetMapping("/find/{id}")
     public ResponseEntity<Employe> getEmployesById (@PathVariable("id") Integer id){
