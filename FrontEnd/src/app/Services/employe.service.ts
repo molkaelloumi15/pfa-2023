@@ -19,6 +19,14 @@ export class EmployeService {
     return this.http.get<Employe[]>(`${this.apiServeurUrl}/Employe/all`);
   }
 
+  public countEmployeByProjetRecherche(): Observable<object[]> {
+    return this.http.get<object[]>(`${this.apiServeurUrl}/Employe/projets`);
+  }
+
+  public countEmployeByDep(): Observable<object[]> {
+    return this.http.get<object[]>(`${this.apiServeurUrl}/Employe/dep`);
+  }
+
   public getEmployeById(id: number): Observable<Employe> {
     return this.http.get<Employe>(`${this.apiServeurUrl}/Employe/find/${id}`);
   }
