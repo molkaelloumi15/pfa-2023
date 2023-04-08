@@ -30,11 +30,13 @@
                             <label class="form-label  col">Selectionner le projet de recherche</label>
                             <input class="btn btn-grey mx-auto px-3 col text-dark" type="button"
                                    value="Chercher Projet"  (click)="searchProjets()">
-                            <br>
-                            <label class="form-label text-center">{{pro}}</label>
                         </div>
-                        <div class="mt-3 row">
-                            <label class="form-label  col-2">Liste Etude</label>
+                        <div class="mt-3 row" *ngIf="pro.length != 0">
+                            <label class="form-label  col-3">Liste Projet : </label>
+                            <p class="col form-label text-center">{{pro}}</p>
+                        </div>
+                        <div class="mt-3 row" *ngIf="listeEtude.length != 0" >
+                            <label class="form-label  col-3">Liste Etude : </label>
                             <p class="col" *ngFor = "let et of this.listeEtude">{{et.etude.titreEtude}}({{et.year}})
                                 <span class="text-danger" style="cursor: pointer" (click)="deleteEtude(et)">X</span> </p>
                         </div>

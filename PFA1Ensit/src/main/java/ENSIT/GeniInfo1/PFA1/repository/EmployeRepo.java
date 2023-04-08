@@ -10,6 +10,6 @@ import java.util.List;
 @Repository
 public interface EmployeRepo extends JpaRepository<Employe,Integer> {
 
-    @Query("SELECT count(e.numEmp), d.numDep FROM Employe e JOIN e.posteTelephonique pt JOIN pt.bureau b JOIN b.departement d GROUP BY d.numDep")
+    @Query("SELECT count(e.numEmp), d.intituleDep FROM Employe e JOIN e.posteTelephonique pt JOIN pt.bureau b JOIN b.departement d GROUP BY d.intituleDep")
     List<Object[]> countEmployeByDep();
 }

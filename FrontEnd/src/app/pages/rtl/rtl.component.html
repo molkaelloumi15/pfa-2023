@@ -11,14 +11,14 @@
             </div>
             <div class="col-sm-6">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-sm btn-danger btn-simple active"  (click)="data=datasets[0];updateOptions();clicked=true;clicked1=false;clicked2=false" [ngClass]="{'active':clicked===true}">
+                <label class="btn btn-sm btn-danger btn-simple active"  (click)="data=datasets[0];updateOptions();clicked=true;clicked1=false;" [ngClass]="{'active':clicked===true}">
                   <input type="radio" name="options" checked>
                   <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block"> حسابات</span>
                   <span class="d-block d-sm-none">
                     <i class="tim-icons icon-single-02"></i>
                   </span>
                 </label>
-                <label class="btn btn-sm btn-danger btn-simple" (click)="data=datasets[1];updateOptions();clicked=false;clicked1=true;clicked2=false" [ngClass]="{'active':clicked1===true}">
+                <label class="btn btn-sm btn-danger btn-simple" (click)="data=datasets[1];updateOptions();clicked=false;clicked1=true;" [ngClass]="{'active':clicked1===true}">
                   <input type="radio" class="d-none d-sm-none" name="options">
                   <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block"> المشتريات</span>
                   <span class="d-block d-sm-none">

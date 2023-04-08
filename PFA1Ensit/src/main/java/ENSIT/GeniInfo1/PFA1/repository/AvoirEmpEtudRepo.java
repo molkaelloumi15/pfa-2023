@@ -14,6 +14,6 @@ import java.util.List;
 public interface AvoirEmpEtudRepo extends JpaRepository<AvoirEmpEtud, AvoirEmpEtudPk> {
     List<AvoirEmpEtud> findAllByEmploye_NumEmp(int employe);
     List<AvoirEmpEtud> findAllByEtude_IdEtude(int etude);
-    @Query("SELECT count(employe.numEmp), etude.idEtude from AvoirEmpEtud group by etude.idEtude")
+    @Query("SELECT count(employe.numEmp), etude.titreEtude from AvoirEmpEtud group by etude.titreEtude")
     List<Object[]> countEmployeByEtude();
 }

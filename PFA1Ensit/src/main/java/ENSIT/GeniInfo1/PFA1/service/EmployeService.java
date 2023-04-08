@@ -43,14 +43,14 @@ public class EmployeService {
 
     public List<Object[]> countEmployeByProjetRecherche() {
         List<Object[]> results = new ArrayList<>();
-        String query = "SELECT COUNT(num_emp), num_projet_recherche FROM emp_pro GROUP BY num_projet_recherche";
+        String query = "SELECT COUNT(num_emp), intitule_projet_recherche FROM emp_pro, projet_recherche where emp_pro.num_projet_recherche = projet_recherche.num_projet_recherche GROUP BY intitule_projet_recherche";
         try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/PFA2023", "root", "Magali_1984");
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(query)) {
             while (rs.next()) {
                 int count = rs.getInt(1);
-                int numProjetRecherche = rs.getInt(2);
-                Object[] row = new Object[]{count, numProjetRecherche};
+                String nomProjet = rs.getString(2);
+                Object[] row = new Object[]{count, nomProjet};
                 results.add(row);
             }
         } catch (SQLException ex) {
