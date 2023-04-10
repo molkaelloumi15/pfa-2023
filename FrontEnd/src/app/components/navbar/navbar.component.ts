@@ -201,22 +201,22 @@ export class NavbarComponent implements OnInit, OnDestroy {
         }
         switch (titlee) {
             case 'projet_recherche':
-                titlee = 'Gestion des Projets De Recherche';
+                titlee = 'Gestion de Projets De Recherche';
                 break;
             case 'department':
                 titlee = 'Gestion des Départments';
                 break;
             case 'emp':
-                titlee = 'Gestion des Employées';
+                titlee = 'Gestion des Employés';
                 break;
             case 'bureau':
                 titlee = 'Gestion des Bureaux';
                 break;
             case 'tel':
-                titlee = 'Gestion Des Postes Téléphoniques';
+                titlee = 'Gestion De Poste Téléphonique';
                 break;
             case 'etude':
-                titlee = 'Gestion Des Etudes';
+                titlee = 'Gestion Des Études';
                 break;
             default :
                 titlee = '';

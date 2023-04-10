@@ -5,9 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b68cf767-e8e3-404f-83a4-1f03d0ff360b" name="Default Changelist" comment="Recherche, Modification, Supression, ajout, consultation,&#10;CRUD terminé &#10;version 1">
+      <change afterPath="$PROJECT_DIR$/src/assets/img/images/d5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/images/d6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/images/s5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/images/s6.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/delete-modal/delete-modal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/delete-modal/delete-modal.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/navbar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/navbar/navbar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/sidebar/sidebar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sidebar/sidebar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/bureau/bureau.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/bureau/bureau.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/employee/emp-add/emp-add.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/employee/emp-add/emp-add.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/employee/emp-con/emp-con.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/employee/emp-con/emp-con.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/employee/emp-mod/emp-mod.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/employee/emp-mod/emp-mod.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/employee/employee.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/employee/employee.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/etudes/etudes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/etudes/etudes.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/index/index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/index/index.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/projet/projet.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/projet/projet.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/projet/projet.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/projet/projet.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PFA1Ensit/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PFA1Ensit/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PFA1Ensit/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PFA1Ensit/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PFA1Ensit/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PFA1Ensit/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PFA1Ensit/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PFA1Ensit/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PFA1Ensit/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PFA1Ensit/PFA.GInfo1.Ensit.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,29 +56,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/keranis/Ensit/1er Génie Info/PFA/pfa-2023/FrontEnd&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/keranis/Ensit/1er Génie Info/PFA/pfa-2023/FrontEnd/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/pages/index" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Users\mahdi\Desktop\ENSIT\pfa-2023\FrontEnd\node_modules\typescript\lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
   <component name="ReaderModeSettings">
     <option name="enabled" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mahdi\Desktop\ENSIT\pfa-2023\FrontEnd\src\app\pages\index" />
       <recent name="C:\Users\mahdi\Desktop\ENSIT\pfa-2023\FrontEnd\src\app\Model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mahdi\Desktop\ENSIT\pfa-2023\FrontEnd\src\assets\img" />
       <recent name="$PROJECT_DIR$" />
       <recent name="C:\Users\mahdi\Desktop\ENSIT\pfa-2023\FrontEnd\src\app\Services\spec.ts" />
     </key>
@@ -98,6 +121,8 @@
       <workItem from="1680513462332" duration="30000" />
       <workItem from="1680513543639" duration="7000" />
       <workItem from="1680778353049" duration="8817000" />
+      <workItem from="1680905127378" duration="8063000" />
+      <workItem from="1681148764320" duration="4419000" />
     </task>
     <task id="LOCAL-00001" summary="fist Commit">
       <created>1679879671176</created>
@@ -134,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680152427106</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Recherche, Modification, Supression, ajout, consultation,&#10;CRUD terminé &#10;version 1">
+      <created>1680913632008</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680913632008</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +182,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

@@ -12,7 +12,7 @@ declare interface RouteInfo {
 export const ROUTES: RouteInfo[] = [
   {
     path: '/dashboard',
-    title: 'Dashboard',
+    title: 'Tableau De Bord',
     rtlTitle: 'لوحة القيادة',
     icon: 'icon-chart-pie-36',
     class: ''
@@ -26,14 +26,14 @@ export const ROUTES: RouteInfo[] = [
   },
   {
     path: '/department',
-    title: 'Department',
+    title: 'département',
     rtlTitle: 'Department',
     icon: 'icon-badge',
     class: ''
   },
   {
     path: '/emp',
-    title: 'Employées',
+    title: 'employés',
     rtlTitle: 'Employers',
     icon: 'icon-single-02',
     class: ''
@@ -47,14 +47,14 @@ export const ROUTES: RouteInfo[] = [
   },
   {
     path: '/tel',
-    title: 'Poste Téléphoniques',
+    title: 'postes téléphoniques',
     rtlTitle: 'Phones',
     icon: 'icon-mobile',
     class: ''
   },
   {
     path: '/etude',
-    title: 'Etudes',
+    title: 'études',
     rtlTitle: 'Studies',
     icon: 'icon-paper',
     class: ''
