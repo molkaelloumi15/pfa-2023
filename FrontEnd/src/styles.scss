@@ -1,0 +1,39 @@
+.icon-alert-circle-exc:hover{
+  color : blue ;
+  cursor : pointer ;
+}
+
+.icon-pencil:hover{
+  color : seagreen;
+  cursor : pointer ;
+}
+
+.icon-trash-simple:hover{
+  color : red;
+  cursor : pointer ;
+}
+
+.icon-tap-02{
+  cursor : pointer ;
+}
+
+table {
+  max-height: 550px; /* set the maximum height of the container */
+  overflow-y: scroll;
+  //display: block; /* use block display to limit the visible rows */
+  table-layout: fixed;
+}
+tbody {
+  display: block;
+  overflow-y: scroll;
+  height: calc(20 * 1.2em); /* Set the height to fit five rows */
+}
+tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed; /* Inherit the fixed table layout */
+}
+td {
+  border: 1px solid black;
+  padding: 5px;
+}

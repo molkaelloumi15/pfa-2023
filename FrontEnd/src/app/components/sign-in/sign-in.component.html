@@ -1,0 +1,42 @@
+<!--suppress AngularInvalidTemplateReferenceVariable, AngularUndefinedBinding -->
+<div class="" style="margin-top: -1%">
+
+
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Créer Un Compte</h5>
+    </div>
+    <div class="modal-body">
+        <div class="">
+            <form #form="ngForm" (submit)="onSubmit(form)">
+                <div class="row mx-2"> <label class="form-label col">Nom Utilisateur</label>
+                    <input class="input-group-text form-control mx-auto col" [(ngModel)] = "user.username"
+                           placeholder="Nom Utilisateur"  [ngClass]="user.username.length > 3 ? 'is-valid' : 'is-invalid'"
+                           name="username" #username="ngModel" required ngModel>
+                </div>
+                <div class="row mt-3 mx-2"> <label class="form-label col">Email Utilisateur</label>
+                    <input class="input-group-text form-control mx-auto col " (ngModelChange)="mailing(mail.value)"
+                           placeholder="Mail Utilisateur" type="email" [(ngModel)] = "user.mail"
+                           [ngClass]="goodmail ? 'is-valid' : 'is-invalid'"
+                           name="mail" #mail="ngModel" required ngModel>
+                </div>
+                <div class="row mt-3 mx-2"> <label class="form-label col">Mot de passe Utilisateur</label>
+                    <input class="input-group-text form-control mx-auto col" [(ngModel)] = "user.pass"
+                           placeholder="Mot de passe" type="password" [ngClass]="user.pass.length > 0 ? 'is-valid' : 'is-invalid'"
+                           name="pass" #pass="ngModel" required ngModel>
+                </div>
+                <div class="row mt-3 mx-2">
+                    <label class="form-label col">Confirmer Mot de passe</label>
+                    <input class="input-group-text form-control mx-auto col"  [ngClass]="this.user.pass === passe ? 'is-valid' : 'is-invalid'"
+                           placeholder="Confirmer Mot de passe" type="password" [value] = "passe" (ngModelChange)="samePass(pass2.value)"
+                           name="pass2" #pass2="ngModel" required ngModel>
+
+                </div>
+            </form>
+        </div>
+        <p class="text-danger text-center" *ngIf="!correcte" style="margin-top: 5%; margin-bottom: -5%;">Veuillez Vérifier le mail!</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" (click)="onSubmit(form)" [disabled]="form.invalid || this.user.pass !== passe || !this.goodmail || user.username.length < 4 " class="btn btn-success">Confirmer</button>
+        <button type="button" class="btn btn-danger" (click)="close()">Annuler</button>
+    </div>
+</div>

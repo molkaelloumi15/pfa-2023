@@ -1,0 +1,44 @@
+<!--suppress AngularUndefinedBinding -->
+<div class="" style="margin-top: -1%">
+
+
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Recherche D'une Etude</h5>
+    </div>
+    <div class="modal-body">
+        <div class="" *ngIf="this.AEE.etude.idEtude === 0">
+            <table class=" table tablesorter" id="">
+                <thead class=" text-primary">
+                <tr>
+                    <th class=" text-center">Id Etude</th>
+                    <th class=" text-center">Titre Etude</th>
+                    <th class=" text-center">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let i of list">
+                    <td class=" text-center">{{i.idEtude}}</td>
+                    <td class=" text-center">{{i.titreEtude}}</td>
+                    <td class=" text-center">
+                        <i class="tim-icons icon-tap-02 m-2" (click)="select(i.idEtude)"></i>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <form>
+            <div class="row" *ngIf="this.AEE.etude.idEtude !== 0">
+                <label>Salaire<input class="input-group-text mx-auto col" name="salaire"
+                                     [(ngModel)]="AEE.salaire" type="number" min="0" step="0.1"></label>
+                <label>Année<input class="input-group-text mx-auto col" [(ngModel)]="AEE.year"
+                               name="annee"     ngModel type="number" [max]="AEE.year"></label>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button *ngIf="this.AEE.etude.idEtude === 0" type="button" class="btn btn-success" (click)="accept()">Ajouter Une Etude</button>
+        <button *ngIf="this.AEE.etude.idEtude !== 0" type="button" class="btn btn-success" (click)="onSubmit()">Finir</button>
+        <button type="button" class="btn btn-danger" (click)="close()">Annuler</button>
+    </div>
+</div>
+

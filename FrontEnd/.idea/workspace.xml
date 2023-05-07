@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b68cf767-e8e3-404f-83a4-1f03d0ff360b" name="Default Changelist" comment="Recherche, Modification, Supression, ajout, consultation,&#10;CRUD terminé &#10;version 1">
+      <change afterPath="$PROJECT_DIR$/src/assets/img/images/d5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/images/d6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/images/s5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/images/s6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/delete-modal/delete-modal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/delete-modal/delete-modal.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/navbar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/navbar/navbar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/sidebar/sidebar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sidebar/sidebar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/bureau/bureau.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/bureau/bureau.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/employee/emp-add/emp-add.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/employee/emp-add/emp-add.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/employee/emp-con/emp-con.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/employee/emp-con/emp-con.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/employee/emp-mod/emp-mod.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/employee/emp-mod/emp-mod.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/employee/employee.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/employee/employee.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/etudes/etudes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/etudes/etudes.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/index/index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/index/index.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/projet/projet.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/projet/projet.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PFA1Ensit/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PFA1Ensit/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PFA1Ensit/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PFA1Ensit/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PFA1Ensit/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PFA1Ensit/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PFA1Ensit/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PFA1Ensit/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PFA1Ensit/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PFA1Ensit/PFA.GInfo1.Ensit.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.min.css" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2NZlcDrnL1QpfO5K6N05YJPmSDa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/pages/index" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Users\mahdi\Desktop\ENSIT\pfa-2023\FrontEnd\node_modules\typescript\lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="ReaderModeSettings">
+    <option name="enabled" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mahdi\Desktop\ENSIT\pfa-2023\FrontEnd\src\app\pages\index" />
+      <recent name="C:\Users\mahdi\Desktop\ENSIT\pfa-2023\FrontEnd\src\app\Model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mahdi\Desktop\ENSIT\pfa-2023\FrontEnd\src\assets\img" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="C:\Users\mahdi\Desktop\ENSIT\pfa-2023\FrontEnd\src\app\Services\spec.ts" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Tests (black-dashboard-angular)" type="JavaScriptTestRunnerKarma">
+      <config-file value="$PROJECT_DIR$/src/karma.conf.js" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b68cf767-e8e3-404f-83a4-1f03d0ff360b" name="Default Changelist" comment="" />
+      <created>1679879563585</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679879563585</updated>
+      <workItem from="1679879565776" duration="9692000" />
+      <workItem from="1679933470850" duration="2662000" />
+      <workItem from="1680008939415" duration="22525000" />
+      <workItem from="1680129782727" duration="16253000" />
+      <workItem from="1680187249402" duration="16538000" />
+      <workItem from="1680286547325" duration="85000" />
+      <workItem from="1680298456332" duration="1801000" />
+      <workItem from="1680513462332" duration="30000" />
+      <workItem from="1680513543639" duration="7000" />
+      <workItem from="1680778353049" duration="8817000" />
+      <workItem from="1680905127378" duration="8063000" />
+      <workItem from="1681148764320" duration="4419000" />
+    </task>
+    <task id="LOCAL-00001" summary="fist Commit">
+      <created>1679879671176</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679879671176</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fist Commit">
+      <created>1679879748995</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679879748995</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fist Commit">
+      <created>1679880152508</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679880152508</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Ajout , suppression">
+      <created>1680059329478</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680059329478</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Recherche, Modification, Supression, ajout, consultation,&#10;CRUD terminé &#10;version 1">
+      <created>1680152427106</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680152427106</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Recherche, Modification, Supression, ajout, consultation,&#10;CRUD terminé &#10;version 1">
+      <created>1680913632008</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680913632008</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="fist Commit" />
+    <MESSAGE value="Ajout , suppression" />
+    <MESSAGE value="Recherche, Modification, Supression, ajout, consultation,&#10;CRUD terminé &#10;version 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Recherche, Modification, Supression, ajout, consultation,&#10;CRUD terminé &#10;version 1" />
+  </component>
+</project>

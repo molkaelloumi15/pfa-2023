@@ -1,0 +1,35 @@
+<div class="" style="margin-top: -1%">
+
+
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Recherche D'un Bureau</h5>
+    </div>
+    <div class="modal-body">
+        <div class="">
+            <table class="table" id="">
+                <thead class=" text-primary">
+                <tr>
+                    <th class=" text-center">Numéro Bureau</th>
+                    <th class=" text-center">Surface (m²)</th>
+                    <th class=" text-center">Department</th>
+                    <th class=" text-center">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let i of list">
+                    <td class=" text-center">{{i.numBureau}}</td>
+                    <td class=" text-center">{{i.surface}} m²</td>
+                    <td class=" text-center">{{i.departement.intituleDep}}</td>
+                    <td class=" text-center">
+                        <i class="tim-icons icon-tap-02 m-2" (click)="select(i.numBureau)"></i>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="accept()">Ajouter Un Bureau</button>
+        <button type="button" class="btn btn-danger" (click)="close()">Annuler</button>
+    </div>
+</div>

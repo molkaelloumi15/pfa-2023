@@ -1,0 +1,54 @@
+<!--suppress AngularUndefinedBinding, AngularInvalidTemplateReferenceVariable -->
+<div class=" content">
+    <div class=" row">
+        <div class=" col-md-12">
+            <div class=" card card-plain">
+                <div class="row card-header">
+                    <div class="col">
+                        <h4 class=" card-title">Gestion des Études</h4>
+                        <p class=" category">Listes Des Études</p>
+
+                    </div>
+
+                    <div class="col-5 text-center">
+                        <h5>Rechercher :</h5>
+                        <input type="search" (ngModelChange)="search(key.value)" #key="ngModel" ngModel name="key"
+                               class="form-control form-rounded" placeholder="Rechercher">
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-grey m-3 mt-4 text-dark" [disabled]="this.currentUser.fonction=='Visiteur'" (click)="ajouter()">Ajouter</button>
+                    </div>
+                </div>
+                <div class=" card-body">
+                    <div class=" table-responsive">
+                        <table class=" table tablesorter" id="">
+                            <thead class=" text-primary">
+                            <tr>
+                                <th class=" text-center">Id Étude</th>
+                                <th class=" text-center">Titre Étude</th>
+                                <th class=" text-center">Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <h1 class="text-center mt-5" *ngIf="this.display.length == 0">
+
+                                <span>Aucune Resultat Trouvé</span>
+
+                            </h1>
+                            <tr *ngFor = "let i of display">
+                                <td class=" text-center">{{i.idEtude}}</td>
+                                <td class=" text-center">{{i.titreEtude}}</td>
+                                <td class=" text-center">
+
+                                    <i *ngIf="this.currentUser.fonction !=='Visiteur'" class="tim-icons icon-pencil m-2" (click)="modifier(i.idEtude)"></i>
+                                    <i *ngIf="this.currentUser.fonction !=='Visiteur'" class="tim-icons icon-trash-simple m-2" (click)="deleteModal(i.idEtude)"></i>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

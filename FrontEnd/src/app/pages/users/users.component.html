@@ -1,0 +1,55 @@
+<!--suppress AngularUndefinedBinding, AngularInvalidTemplateReferenceVariable -->
+<div class=" content">
+    <div class=" row">
+        <div class=" col-md-12">
+            <div class=" card card-plain">
+                <div class="row card-header">
+                    <div class="col">
+                        <h4 class=" card-title">Gestion des Utilisateur</h4>
+                        <p class=" category">Listes Des Utilisateurs</p>
+                    </div>
+
+                    <div class="col-5 text-center">
+                        <h5>Rechercher :</h5>
+                        <input type="search" (ngModelChange)="search(key.value)" #key="ngModel" ngModel name="key"
+                               class="form-control form-rounded" placeholder="Rechercher">
+                    </div>
+                </div>
+                <div class=" card-body">
+                    <div class=" table-responsive">
+                        <table class=" table tablesorter" id="">
+                            <thead class=" text-primary">
+                            <tr>
+                                <th class=" text-center">UserName</th>
+                                <th class=" text-center">Mail</th>
+                                <th class=" text-center">Fonction</th>
+                                <th class=" text-center">Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <h1 class="text-center mt-5" *ngIf="this.display.length == 0">
+
+                                <span>Aucune Resultat Trouvé</span>
+
+                            </h1>
+                            <tr *ngFor = "let i of display">
+                                <td class=" text-center">{{i.username}}</td>
+                                <td class=" text-center">{{i.mail}}</td>
+                                <td class=" text-center">
+                                    <select  class="col form-select" name="fonctione" #fonctione="ngModel"
+                                             [(ngModel)]="i.fonction" required ngModel (change)="newjob(i)">
+                                        <option *ngFor="let f of this.fonction"  [value]="f" >{{f}}</option>
+                                    </select>
+                                </td>
+                                <td class=" text-center">
+                                    <i class="tim-icons icon-trash-simple m-2" (click)="deleteModal(i.idEtude)"></i>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

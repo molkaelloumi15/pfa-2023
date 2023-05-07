@@ -1,0 +1,23 @@
+<!--suppress AngularInvalidTemplateReferenceVariable -->
+<div class=" content">
+  <div class=" row">
+    <div class=" col-md-12">
+      <div class="text-center">
+        <h2>Ajout D'une nouvelle éutde</h2>
+      </div>
+      <div class="w-50 mx-auto">
+        <form class="mt-5"  (submit)="onSubmit(form)" #form="ngForm">
+          <div class="form-group row">
+            <label class="form-label col">Intitulé de la nouvelle étude
+            <input class="input-group-text mx-auto col" name="titre" #titre="ngModel"  required ngModel
+                   placeholder="Ecrivez le titre d'étude ici!" type="text"></label>
+          </div>
+          <div class="">
+            <input type="submit" [disabled]="form.invalid" class="btn btn-danger float-lg-end mx-3" value="Confirmer">
+            <!--            <h5 class="text-success col h4">Nouveau Projet De Recherche Ajouté Avec Succée</h5>-->
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
